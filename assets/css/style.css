@@ -21,11 +21,10 @@ header {
 }
 
 .menu-icon {
-    font-size: 30px;
+    font-size: 50px; /* Größerer Hamburger */
     cursor: pointer;
-    position: absolute;
-    top: 20px;
-    right: 20px;
+    color: gold; /* Goldene Farbe */
+    margin-top: 20px; /* Platzierung unter dem Text */
 }
 
 nav.side-menu {
@@ -75,4 +74,4 @@ footer {
     text-align: center;
     padding: 10px 0;
     margin-top: 20px;
-​⬤
+}
