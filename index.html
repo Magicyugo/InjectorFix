@@ -5,21 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>InjectorFix - Einspritzdüsen Service</title>
     <link rel="stylesheet" href="assets/css/style.css">
+    <script src="assets/js/script.js" defer></script>
 </head>
 <body>
     <header>
         <div class="header-content">
             <h1>Willkommen bei InjectorFix, der Servicepartner für Ihre Einspritzdüsen</h1>
+            <div class="menu-icon" onclick="toggleMenu()">&#9776;</div>
         </div>
     </header>
-    <nav class="side-menu">
+    <nav class="side-menu" id="sideMenu">
         <ul>
-            <li><a href="#about">Über uns</a></li>
-            <li><a href="#services">Dienstleistung</a></li>
-            <li><a href="#price">Preis</a></li>
-            <li><a href="#process">Abwicklung</a></li>
-            <li><a href="#order">Bestellung</a></li>
-            <li><a href="#contact">Kontakt</a></li>
+            <li><a href="#about" onclick="toggleMenu()">Über uns</a></li>
+            <li><a href="#services" onclick="toggleMenu()">Dienstleistung</a></li>
+            <li><a href="#price" onclick="toggleMenu()">Preis</a></li>
+            <li><a href="#process" onclick="toggleMenu()">Abwicklung</a></li>
+            <li><a href="#order" onclick="toggleMenu()">Bestellung</a></li>
+            <li><a href="#contact" onclick="toggleMenu()">Kontakt</a></li>
         </ul>
     </nav>
     <main>
