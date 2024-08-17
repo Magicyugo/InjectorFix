@@ -7,29 +7,49 @@ body {
 }
 
 header {
-    background-color: #007bff;
+    background-color: #007bff; /* Blau */
     color: white;
-    padding: 10px 0;
+    padding: 20px 0;
     text-align: center;
+}
+
+.header-content {
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 20px;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 24px;
 }
 
 nav ul {
     list-style-type: none;
     padding: 0;
+    margin: 20px 0 0 0;
+    display: flex;
+    justify-content: center;
 }
 
 nav ul li {
-    display: inline;
-    margin-right: 10px;
+    margin-right: 15px;
 }
 
 nav ul li a {
     color: white;
     text-decoration: none;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
 }
 
 main {
     padding: 20px;
+    max-width: 1200px;
+    margin: auto;
 }
 
 footer {
