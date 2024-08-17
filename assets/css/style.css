@@ -20,12 +20,14 @@ header {
 }
 
 nav.side-menu {
-    width: 200px;
-    padding: 20px;
-    background-color: #e9e9e9;
-    position: absolute;
-    top: 100px; /* Unterhalb des Headers */
+    position: fixed;
+    top: 100px;
     left: 20px;
+    background-color: #e9e9e9;
+    padding: 20px;
+    width: 200px;
+    height: 100%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 nav.side-menu ul {
@@ -37,37 +39,24 @@ nav.side-menu ul li {
     margin-bottom: 15px;
 }
 
-nav.side-menu ul li.menu-title {
-    font-weight: bold;
-    font-size: 18px;
-    margin-bottom: 10px;
-}
-
-.dropdown-content {
-    display: none;
-    flex-direction: column;
-}
-
-.dropdown-content a {
-    background-color: #e9e9e9;
-    color: #333;
-    padding: 10px;
+nav.side-menu ul li a {
     text-decoration: none;
+    font-weight: bold;
+    color: #333;
 }
 
-.dropdown-content a:hover {
-    background-color: #d4d4d4;
-}
-
-.dropdown:hover .dropdown-content {
-    display: block;
+nav.side-menu ul li a:hover {
+    color: #007bff;
 }
 
 main {
-    padding: 20px;
-    max-width: 1200px;
-    margin: auto;
     margin-left: 240px; /* Platz für das linke Menü */
+    padding: 20px;
+}
+
+section {
+    padding: 50px 0;
+    border-bottom: 1px solid #ddd;
 }
 
 footer {
