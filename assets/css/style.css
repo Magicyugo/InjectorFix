@@ -94,7 +94,7 @@ form label {
 form input[type="text"],
 form input[type="email"],
 form textarea {
-    width: calc(100% + 1cm); /* Breite um 1 cm erhöht */
+    width: calc(100% + 0.5cm); /* Breite um 0,5 cm erhöht */
     padding: 10px;
     margin-bottom: 20px;
     border: 1px solid #ccc;
