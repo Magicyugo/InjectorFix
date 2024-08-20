@@ -71,9 +71,15 @@
             <p>Sobald die Ware bei uns eintrifft, wird der Wareneingang dokumentiert, sowie der Prüf-und Reinigungsprozess Ihrer eingeschickten Einspritzdüsen. Nach erfolgreicher Instandsetzung wird Ihnen per Mail ein Bericht zugeschickt und nach erfolgreichem Zahlungseingang wieder die Düsen an Sie verschickt.</p>
         </section>
 
+        <section id="order">
+            <h2>Bestellung</h2>
+            <p>Um Ihre Bestellung aufzugeben, laden Sie bitte das Bestellformular herunter, füllen es aus und senden es zusammen mit den Einspritzdüsen an uns.</p>
+            <a href="assets/pdf/Bestellformular.pdf" download="Bestellformular.pdf">Bestellformular herunterladen</a>
+        </section>
+
         <section id="contact">
             <h2>Kontakt</h2>
-            <form action="https://formspree.io/f/mdknlqjy" method="POST">
+            <form action="https://formspree.io/f/mdknlqjy" method="POST" id="contact-form">
                 <label for="name">Name:</label>
                 <input type="text" id="name" name="name" required>
                 
@@ -106,6 +112,14 @@
                 item.addEventListener('click', () => {
                     nav.style.display = 'none';
                 });
+            });
+
+            // Formular nach Absenden zurücksetzen
+            const contactForm = document.getElementById('contact-form');
+            contactForm.addEventListener('submit', function () {
+                setTimeout(() => {
+                    contactForm.reset();
+                }, 1000); // Warte 1 Sekunde, bevor das Formular zurückgesetzt wird
             });
         });
     </script>
