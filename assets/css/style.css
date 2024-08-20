@@ -6,34 +6,31 @@ body {
     color: #333;
 }
 
-/* Header mit angepasstem Blau aus dem Logo */
+/* Header mit Logo und Hamburger Menü */
 header {
-    background-color: #0072bc; /* Angepasstes Blau aus dem Logo */
-    color: white;
-    padding: 20px 0;
+    background-color: #fff; /* Weißer Hintergrund für das Logo */
     text-align: center;
+    padding: 20px 0;
     position: relative;
 }
 
 .header-content {
-    max-width: 1200px;
-    margin: auto;
-    padding: 0 20px;
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: center;
 }
 
 .logo {
-    max-width: 100px; /* Passe die Größe des Logos an */
+    max-width: 150px; /* Größe des Logos */
     height: auto;
-    margin-right: 20px; /* Abstand zwischen Logo und Text */
+    margin-bottom: 10px; /* Abstand zum Hamburger-Menü */
 }
 
-h1 {
-    margin: 0;
-    font-size: 24px;
-    font-weight: normal;
+.menu-icon {
+    font-size: 40px;
+    cursor: pointer;
+    color: #333;
+    margin-top: 10px; /* Abstand zum Logo */
 }
 
 nav.side-menu {
@@ -66,10 +63,18 @@ nav.side-menu ul li a {
     font-weight: bold;
 }
 
+/* Hauptinhalt */
 main {
     padding: 20px;
-    max-width: 1200px;
+    max-width: 1000px; /* Begrenze die maximale Breite */
     margin: auto;
+}
+
+/* Einheitliche Bilddarstellung */
+.responsive-img {
+    width: 100%;
+    height: auto;
+    margin: 20px 0;
 }
 
 section {
@@ -103,7 +108,7 @@ form label {
 form input[type="text"],
 form input[type="email"],
 form textarea {
-    width: calc(100% + 0.5cm); /* Breite um 0,5 cm erhöht */
+    width: calc(100% - 2cm); /* Breite um 2 cm gekürzt */
     padding: 10px;
     margin-bottom: 20px;
     border: 1px solid #ccc;
@@ -128,39 +133,26 @@ form button[type="submit"]:hover {
     background-color: #0056b3;
 }
 
-/* Styles für die Produktdetails innerhalb der Kategorie "Über uns" */
-#about {
-    padding: 20px;
-    background-color: #f9f9f9;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    margin-top: 20px;
-}
-
 #about h2,
-#about h3 {
+#about h3,
+#services h2,
+#services h3 {
     color: #333;
 }
 
-#about p {
+#about p,
+#services p {
     margin-bottom: 15px;
     line-height: 1.6;
 }
 
-#about img {
-    max-width: 100%;
-    height: auto;
-    margin: 20px 0;
-    display: block;
-}
-
-#about .features ul,
-#about .test-types ul {
+#services .features ul,
+#services .test-types ul {
     list-style-type: disc;
     padding-left: 20px;
 }
 
-#about .features ul li,
-#about .test-types ul li {
+#services .features ul li,
+#services .test-types ul li {
     margin-bottom: 10px;
 }
