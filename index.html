@@ -3,122 +3,99 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>InjectorFix - Einspritzdüsen Service</title>
-    <link rel="stylesheet" href="assets/css/style.css">
-    <script src="assets/js/script.js" defer></script>
+    <title>InjectorFix</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <div class="header-content">
-            <img src="assets/Images/IMG_5975.jpeg" alt="InjectorFix Logo" class="logo">
-            <div class="menu-icon" onclick="toggleMenu()">&#9776;</div>
-        </div>
-    </header>
 
-    <nav class="side-menu" id="sideMenu">
-        <ul>
-            <li><a href="#about" onclick="toggleMenu()">Über uns</a></li>
-            <li><a href="#services" onclick="toggleMenu()">Dienstleistung</a></li>
-            <li><a href="#price" onclick="toggleMenu()">Preis</a></li>
-            <li><a href="#process" onclick="toggleMenu()">Abwicklung</a></li>
-            <li><a href="#order" onclick="toggleMenu()">Bestellung</a></li>
-            <li><a href="#contact" onclick="toggleMenu()">Kontakt</a></li>
-        </ul>
-    </nav>
+<header>
+  <div class="header-content">
+    <img src="images/IMG_5975.jpeg" alt="Firmenlogo" class="logo">
+  </div>
+</header>
 
-    <main>
-        <!-- Über uns Sektion -->
-        <section id="about">
-            <h2>Über uns</h2>
-            <p>Willkommen bei InjectorFix, Ihrem zuverlässigen Partner für die professionelle Reinigung von Einspritzdüsen. Unser Unternehmen hat es sich zur Aufgabe gemacht, die Leistung und Effizienz Ihres Fahrzeugs durch eine fachgerechte Wartung der Einspritzdüsen zu maximieren. Mit unserem hochmodernen Gerät, dem Thinkcar TK-IMT602, bieten wir eine gründliche und schonende Reinigung, die dafür sorgt, dass Ihre Einspritzdüsen wieder optimal arbeiten.</p>
-            <p>Unser Service ist einfach und bequem: Sie schicken uns Ihre ausgebauten Einspritzdüsen zu, wir reinigen sie sorgfältig und schicken sie Ihnen nach erfolgreicher Überprüfung in einwandfreiem Zustand zurück. Dabei legen wir großen Wert auf Qualität, Präzision und Kundenzufriedenheit.</p>
-            <p>Bei InjectorFix stehen Sie als Kunde im Mittelpunkt. Wir verstehen, wie wichtig ein reibungslos funktionierendes Fahrzeug für Sie ist und setzen alles daran, Ihnen einen schnellen und verlässlichen Service zu bieten. Vertrauen Sie auf unsere Expertise und lassen Sie uns dafür sorgen, dass Ihre Einspritzdüsen wieder in Bestform sind.</p>
-        </section>
+<!-- Hamburger-Menü -->
+<div class="menu-icon" onclick="toggleMenu()">&#9776;</div>
 
-        <!-- Dienstleistung Sektion -->
-        <section id="services">
-            <h2>Dienstleistung</h2>
-            <p>THINKCAR TK-IMT602 ist eine leistungsstarke Reinigungs- und Inspektionsanlage für Kraftstoffinjektoren, die von THINKCAR entwickelt wurde. Integriert die Reinigungs- und Testfunktion des Kraftstoffeinspritzers. Es wird häufig in der Wartung und Reparatur von Automobilen verwendet.</p>
+<nav class="side-menu">
+  <ul>
+    <li><a href="#about">Über uns</a></li>
+    <li><a href="#services">Dienstleistung</a></li>
+    <li><a href="#prices">Preise</a></li>
+    <li><a href="#process">Abwicklung</a></li>
+    <li><a href="#order">Bestellung</a></li>
+    <li><a href="#contact">Kontakt</a></li>
+  </ul>
+</nav>
 
-            <div class="features">
-                <ul>
-                    <li>Ultraschallreinigung</li>
-                    <li>Kraftstoffinjektor-Test</li>
-                    <li>Einheitlichkeitstest</li>
-                    <li>Leckprüfungstest</li>
-                    <li>All-in-One-Design</li>
-                </ul>
-            </div>
+<!-- Inhalt -->
+<main>
+  <section id="about">
+    <h2>Über uns</h2>
+    <p>Willkommen bei InjectorFix, Ihrem zuverlässigen Partner für die professionelle Reinigung von Einspritzdüsen. Unser Unternehmen hat es sich zur Aufgabe gemacht, die Leistung und Effizienz Ihres Fahrzeugs durch eine fachgerechte Wartung der Einspritzdüsen zu maximieren. Mit unserem hochmodernen Gerät, dem Thinkcar TK-IMT602, bieten wir eine gründliche und schonende Reinigung, die dafür sorgt, dass Ihre Einspritzdüsen wieder optimal arbeiten.</p>
+    <p>Unser Service ist einfach und bequem: Sie schicken uns Ihre ausgebauten Einspritzdüsen zu, wir reinigen sie sorgfältig und schicken sie Ihnen nach erfolgreicher Überprüfung in einwandfreiem Zustand zurück. Dabei legen wir großen Wert auf Qualität, Präzision und Kundenzufriedenheit.</p>
+    <p>Bei InjectorFix stehen Sie als Kunde im Mittelpunkt. Wir verstehen, wie wichtig ein reibungslos funktionierendes Fahrzeug für Sie ist und setzen alles daran, Ihnen einen schnellen und verlässlichen Service zu bieten. Vertrauen Sie auf unsere Expertise und lassen Sie uns dafür sorgen, dass Ihre Einspritzdüsen wieder in Bestform sind.</p>
+  </section>
 
-            <img src="assets/Images/IMG_5939.png" alt="THINKCAR TK-IMT602" class="responsive-img">
+  <section id="services">
+    <h2>Dienstleistung</h2>
+    <img src="images/image1.jpeg" alt="Bild 1" class="responsive-img">
+    <img src="images/image2.jpeg" alt="Bild 2" class="responsive-img">
+    <img src="images/image3.jpeg" alt="Bild 3" class="responsive-img">
+    <p>Details zu unseren Dienstleistungen.</p>
+  </section>
 
-            <h3>Hauptmerkmale</h3>
-            <p>THINKCAR TK-IMT602 ist ein mechatronisches Gerät, das Ultraschallreinigungstechnologie und Mikrocomputer-Öldruck-Closed-Loop-Steuerungs-Reinigungs- und Detektionstechnologie kombiniert. Dieses Produkt simuliert verschiedene Betriebsbedingungen des Motors, reinigt und inspiziert die Einspritzdüsen verschiedener Automobile und Motorräder.</p>
+  <section id="prices">
+    <h2>Preise</h2>
+    <p>
+      <strong>Einzelprüfung und Reinigung:</strong> 44,99 € pro Einspritzdüse<br>
+      <strong>Satz mit 4 Einspritzdüsen:</strong> 159,99 €<br>
+      <strong>Satz mit 6 Einspritzdüsen:</strong> 209,99 €
+    </p>
+  </section>
 
-            <img src="assets/Images/IMG_5940.png" alt="THINKCAR Hauptmerkmale" class="responsive-img">
+  <section id="process">
+    <h2>Abwicklung</h2>
+    <p>
+      1. Füllen Sie im Bereich „Bestellung“ das Bestellformular aus.<br>
+      2. Drucken Sie das Formular aus und legen Sie es den ausgebauten und sicher verpackten Einspritzdüsen bei.<br>
+      3. Versenden Sie das Paket an:<br><br>
+      **InjectorFix**<br>
+      Inh.: Boban Malinic<br>
+      Josef-Lumper-Str. 4<br>
+      89257 Illertissen<br><br>
+      Nach Eingang der Ware dokumentieren wir den Wareneingang sowie den gesamten Prüf- und Reinigungsprozess Ihrer Einspritzdüsen. Nach erfolgreicher Instandsetzung erhalten Sie per E-Mail einen detaillierten Bericht. Nach Zahlungseingang versenden wir die gereinigten Einspritzdüsen umgehend an Sie zurück.<br><br>
+      Für weitere Bestellungen oder Fragen können Sie auch unser Kontaktformular nutzen. Alternativ besteht nach vorheriger Absprache die Möglichkeit, die Einspritzdüsen persönlich bei uns vorbeizubringen.
+    </p>
+  </section>
 
-            <h3>ULTRASCHALLREINIGUNG</h3>
-            <p>THINKCAR Injektorreiniger nutzt die Ultraschalltechnologie, um schnell Kohlenstoff und Dreck in den Injektoren zu entfernen. Der unabhängige Ultraschallreinigungsmechanismus und die LED-Anzeige sorgen für eine gründliche Reinigung und machen die Daten einfach.</p>
+  <section id="contact">
+    <h2>Kontakt</h2>
+    <form>
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name">
+      
+      <label for="email">E-Mail:</label>
+      <input type="email" id="email" name="email">
+      
+      <label for="message">Nachricht:</label>
+      <textarea id="message" name="message"></textarea>
+      
+      <button type="submit">Absenden</button>
+    </form>
+  </section>
+</main>
 
-            <img src="assets/Images/IMG_5941.png" alt="Ultraschallreinigung" class="responsive-img">
+<footer>
+  <p>&copy; 2024 InjectorFix. Alle Rechte vorbehalten.</p>
+</footer>
 
-            <h3>KRAFTSTOFFINJEKTORTEST</h3>
-            <p>TK-IMT603 simuliert verschiedene Arbeitsbedingungen des Motors und testet Injektoren verschiedener Autos wie Gleichmäßigkeitstest, Sprühfähigkeitstest, Einspritzflusstest, Lecktest usw., um den Status der Kraftstoffinjektoren zu erkennen.</p>
+<script>
+  function toggleMenu() {
+    var menu = document.querySelector('nav.side-menu');
+    menu.style.display = (menu.style.display === 'flex') ? 'none' : 'flex';
+  }
+</script>
 
-            <div class="test-types">
-                <ul>
-                    <li>Einheitlichkeitstest</li>
-                    <li>Sprühfähigkeitstest</li>
-                    <li>Durchflusstest</li>
-                    <li>Beschleunigender Test</li>
-                    <li>Schaltgeschwindigkeitstest</li>
-                    <li>Reinigung im Fahrzeug</li>
-                    <li>Widerstandstest</li>
-                    <li>Auto-Modus-Test</li>
-                    <li>Rückwärtsspülung</li>
-                </ul>
-            </div>
-
-            <img src="assets/Images/IMG_5942.png" alt="Kraftstoffinjektortest" class="responsive-img">
-        </section>
-
-        <!-- Preis Sektion -->
-        <section id="price">
-            <h2>Preis</h2>
-            <p>Unsere Preise für die Einspritzdüsen-Reinigung.</p>
-        </section>
-
-        <!-- Abwicklung Sektion -->
-        <section id="process">
-            <h2>Abwicklung</h2>
-            <p>Erfahren Sie, wie der Prozess der Einspritzdüsen-Reinigung abläuft.</p>
-        </section>
-
-        <!-- Bestellung Sektion -->
-        <section id="order">
-            <h2>Bestellung</h2>
-            <p>So können Sie unseren Service in Anspruch nehmen.</p>
-        </section>
-
-        <!-- Kontakt Sektion -->
-        <section id="contact">
-            <h2>Kontakt</h2>
-            <form action="https://formspree.io/f/{your-form-id}" method="POST">
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name" required><br><br>
-                
-                <label for="email">E-Mail:</label>
-                <input type="email" id="email" name="email" required><br><br>
-                
-                <label for="message">Nachricht:</label>
-                <textarea id="message" name="message" required></textarea><br><br>
-                
-                <button type="submit">Absenden</button>
-            </form>
-        </section>
-    </main>
-    <footer>
-        <p>&copy; 2024 InjectorFix. Alle Rechte vorbehalten.</p>
-    </footer>
 </body>
 </html>
