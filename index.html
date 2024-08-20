@@ -11,6 +11,11 @@
         <div class="header-content">
             <img src="assets/Images/IMG_5975.jpeg" alt="InjectorFix Logo" class="logo">
         </div>
+        <div class="hamburger-menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
     </header>
 
     <nav>
@@ -51,7 +56,7 @@
         </section>
 
         <section id="prices">
-            <h2>Preise</h2>
+                        <h2>Preise</h2>
             <p>Einzelprüfung und Reinigung: 44,99 € pro Einspritzdüse</p>
             <p>Satz mit 4 Einspritzdüsen: 159,99 €</p>
             <p>Satz mit 6 Einspritzdüsen: 209,99 €</p>
@@ -59,11 +64,11 @@
 
         <section id="process">
             <h2>Abwicklung</h2>
-            <p>Füllen Sie im Bereich „Bestellung“ das Bestellformular aus, drucken dieses aus und legen es mit zu den ausgebauten und gut verpackten Einspritzdüsen. Im Anschluss verschicken Sie das Paket an InjectorFix (Inh: Boban Malinic) Josef-Lumper-Str.4 89257 Illertissen. Sobald die Ware bei uns eintrifft wird der Wareneingang dokumentiert, sowie der Prüf-und Reinigungsprozess Ihrer eingeschickten Einspritzdüsen. Nach erfolgreicher Instandsetzung wird Ihnen per Mail ein Bericht zugeschickt und nach erfolgreichem Zahlungseingang wieder die Düsen an Sie verschickt.</p>
+            <p>Füllen Sie im Bereich „Bestellung“ das Bestellformular aus, drucken dieses aus und legen es mit zu den ausgebauten und gut verpackten Einspritzdüsen. Im Anschluss verschicken Sie das Paket an InjectorFix (Inh: Boban Malinic) Josef-Lumper-Str.4 89257 Illertissen. Sobald die Ware bei uns eintrifft, wird der Wareneingang dokumentiert, sowie der Prüf-und Reinigungsprozess Ihrer eingeschickten Einspritzdüsen. Nach erfolgreicher Instandsetzung wird Ihnen per Mail ein Bericht zugeschickt und nach erfolgreichem Zahlungseingang wieder die Düsen an Sie verschickt.</p>
         </section>
 
         <section id="contact">
-                        <h2>Kontakt</h2>
+            <h2>Kontakt</h2>
             <form>
                 <label for="name">Name:</label>
                 <input type="text" id="name" name="name" required>
@@ -79,5 +84,23 @@
     <footer>
         <p>&copy; 2024 InjectorFix. Alle Rechte vorbehalten.</p>
     </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const menuIcon = document.querySelector('.hamburger-menu');
+            const nav = document.querySelector('nav');
+
+            menuIcon.addEventListener('click', function() {
+                nav.style.display = nav.style.display === 'block' ? 'none' : 'block';
+            });
+
+            // Menü schließen, wenn ein Link angeklickt wird
+            document.querySelectorAll('nav a').forEach(item => {
+                item.addEventListener('click', () => {
+                    nav.style.display = 'none';
+                });
+            });
+        });
+    </script>
 </body>
 </html>
