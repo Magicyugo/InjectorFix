@@ -25,6 +25,7 @@ header {
     height: auto;
 }
 
+/* Hamburger-Menü Stil */
 .hamburger-menu {
     display: flex;
     flex-direction: column;
@@ -40,15 +41,16 @@ header {
 .hamburger-menu span {
     display: block;
     height: 3px;
-    background-color: #333;
+    background-color: #007bff; /* Blau für den Hamburger-Button */
 }
 
+/* Das Hamburger-Menü bleibt immer sichtbar */
 nav {
     display: none; /* Startzustand des Menüs ist versteckt */
     background-color: #333;
     width: 100%;
     position: absolute;
-    top: 60px; /* Positionierung direkt unter dem Header */
+    top: 60px;
     left: 0;
     padding: 10px 0;
 }
