@@ -12,39 +12,60 @@ header {
     padding: 20px 0;
     text-align: center;
     border-bottom: 1px solid #ccc;
+    position: relative; /* Für das positionierte Hamburger-Menü */
+}
+
+.header-content {
+    max-width: 100%; /* Logo Container */
+    margin: auto;
 }
 
 .logo {
-    width: 150px;
+    width: 100%; /* Logo nimmt die volle Breite seines Containers ein */
     height: auto;
 }
 
 nav {
+    display: none; /* Startzustand des Menüs ist versteckt */
     background-color: #333;
-    text-align: center;
+    width: 100%; /* Vollbreite Navigation */
+    position: absolute;
+    top: 100%; /* Direkt unter dem Header */
+    left: 0;
 }
 
 nav ul {
     list-style: none;
-    margin: 0;
     padding: 0;
+    margin: 0;
 }
 
 nav ul li {
-    display: inline-block;
+    text-align: center;
+    padding: 10px 0;
 }
 
 nav ul li a {
     display: block;
-    padding: 10px 20px;
     color: white;
     text-decoration: none;
-    font-weight: bold;
+    padding: 10px;
 }
 
-nav ul li a:hover,
-nav ul li a:focus {
-    background-color: #555;
+.hamburger-menu {
+    display: inline-block;
+    cursor: pointer;
+    position: absolute;
+    right: 20px;
+    top: 10px;
+}
+
+.hamburger-menu span {
+    display: block;
+    width: 30px;
+    height: 3px;
+    background-color: black;
+    margin: 5px 0;
 }
 
 main {
@@ -65,11 +86,6 @@ img {
     margin-bottom: 20px;
 }
 
-h2 {
-    color: #444;
-    margin-bottom: 10px;
-}
-
 footer {
     background-color: #333;
     color: white;
@@ -81,8 +97,8 @@ footer {
 form {
     background-color: #fff;
     padding: 20px;
-    margin-top: 20px;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    margin-top: 20px;
 }
 
 form label {
@@ -116,11 +132,11 @@ form button:hover {
 
 /* Responsive Design */
 @media (max-width: 768px) {
-    nav ul li {
-        display: block;
+    .hamburger-menu span {
+        width: 20px; /* Smaller width for mobile */
     }
 
     .logo {
-        width: 100px; /* Smaller logo for mobile */
+        width: 80%; /* Smaller logo for mobile */
     }
 }
