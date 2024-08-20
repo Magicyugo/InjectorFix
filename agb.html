@@ -12,6 +12,25 @@
             <img src="assets/Images/IMG_5975.jpeg" alt="InjectorFix Logo" class="logo">
         </div>
     </header>
+
+    <div class="hamburger-menu">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+    <nav>
+        <ul>
+            <li><a href="index.html#about">Über uns</a></li>
+            <li><a href="index.html#services">Dienstleistungen</a></li>
+            <li><a href="index.html#prices">Preise</a></li>
+            <li><a href="index.html#process">Abwicklung</a></li>
+            <li><a href="index.html#order">Bestellung</a></li>
+            <li><a href="index.html#contact">Kontakt</a></li>
+            <li><a href="impressum.html">Impressum</a></li>
+            <li><a href="agb.html">AGB</a></li>
+        </ul>
+    </nav>
+
     <main>
         <section id="agb">
             <h2>Allgemeine Geschäftsbedingungen (AGB)</h2>
@@ -28,8 +47,27 @@
             <p>Gemäß § 19 UStG wird keine Umsatzsteuer berechnet.</p>
         </section>
     </main>
+
     <footer>
         <p>&copy; 2024 InjectorFix. Alle Rechte vorbehalten.</p>
     </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const menuIcon = document.querySelector('.hamburger-menu');
+            const nav = document.querySelector('nav');
+
+            menuIcon.addEventListener('click', function() {
+                nav.style.display = nav.style.display === 'block' ? 'none' : 'block';
+            });
+
+            // Menü schließen, wenn ein Link angeklickt wird
+            document.querySelectorAll('nav a').forEach(item => {
+                item.addEventListener('click', () => {
+                    nav.style.display = 'none';
+                });
+            });
+        });
+    </script>
 </body>
 </html>
