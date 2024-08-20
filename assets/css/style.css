@@ -19,24 +19,21 @@ header {
     max-width: 1200px;
     margin: auto;
     padding: 0 20px;
-}
-
-.menu-icon {
-    font-size: 50px;
-    cursor: pointer;
-    color: gold;
-    margin-top: 20px;
-}
-
-/* Zentriertes Logo unterhalb des Headers */
-.logo-container {
-    text-align: center;
-    margin: 20px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .logo {
-    max-width: 300px; /* Passe die Größe des Logos an */
+    max-width: 100px; /* Passe die Größe des Logos an */
     height: auto;
+    margin-right: 20px; /* Abstand zwischen Logo und Text */
+}
+
+h1 {
+    margin: 0;
+    font-size: 24px;
+    font-weight: normal;
 }
 
 nav.side-menu {
