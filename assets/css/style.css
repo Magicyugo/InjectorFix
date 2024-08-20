@@ -1,10 +1,10 @@
 /* Grundlegende Stildefinitionen */
 body {
     font-family: 'Arial', sans-serif;
-    margin: 0;
-    padding: 0;
     background-color: #f4f4f4;
     color: #333;
+    margin: 0;
+    padding: 0;
 }
 
 header {
@@ -15,7 +15,7 @@ header {
 }
 
 .logo {
-    width: 150px; /* Stelle die Größe entsprechend ein */
+    width: 150px;
     height: auto;
 }
 
@@ -26,8 +26,8 @@ nav {
 
 nav ul {
     list-style: none;
-    padding: 0;
     margin: 0;
+    padding: 0;
 }
 
 nav ul li {
@@ -35,31 +35,27 @@ nav ul li {
 }
 
 nav ul li a {
+    display: block;
+    padding: 10px 20px;
     color: white;
-    padding: 10px 15px;
-    display: inline-block;
     text-decoration: none;
     font-weight: bold;
 }
 
-nav ul li a:hover {
+nav ul li a:hover,
+nav ul li a:focus {
     background-color: #555;
 }
 
 main {
     padding: 20px;
-    margin-top: 20px;
 }
 
 section {
     background-color: white;
-    padding: 20px;
     margin-bottom: 20px;
+    padding: 20px;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-}
-
-h2 {
-    color: #444;
 }
 
 img {
@@ -67,6 +63,11 @@ img {
     height: auto;
     display: block;
     margin-bottom: 20px;
+}
+
+h2 {
+    color: #444;
+    margin-bottom: 10px;
 }
 
 footer {
@@ -85,13 +86,15 @@ form {
 }
 
 form label {
-    margin-bottom: 5px;
     display: block;
+    margin-bottom: 5px;
 }
 
-form input, form textarea {
+form input[type="text"],
+form input[type="email"],
+form textarea {
     width: 100%;
-    padding: 8px;
+    padding: 10px;
     margin-bottom: 10px;
     border: 1px solid #ccc;
     border-radius: 4px;
@@ -111,19 +114,13 @@ form button:hover {
     background-color: #4a54e1;
 }
 
-/* Responsive Design für kleinere Bildschirme */
+/* Responsive Design */
 @media (max-width: 768px) {
-    nav ul {
-        text-align: center;
-    }
-
     nav ul li {
         display: block;
-        margin-top: 10px;
     }
 
     .logo {
-        margin: 0 auto;
-        display: block;
+        width: 100px; /* Smaller logo for mobile */
     }
 }
