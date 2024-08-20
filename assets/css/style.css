@@ -6,8 +6,9 @@ body {
     color: #333;
 }
 
+/* Header mit angepasstem Blau aus dem Logo */
 header {
-    background-color: #007bff; /* Blau */
+    background-color: #0072bc; /* Angepasstes Blau aus dem Logo */
     color: white;
     padding: 20px 0;
     text-align: center;
@@ -21,10 +22,21 @@ header {
 }
 
 .menu-icon {
-    font-size: 50px; /* Größerer Hamburger */
+    font-size: 50px;
     cursor: pointer;
-    color: gold; /* Goldene Farbe */
-    margin-top: 20px; /* Platzierung unter dem Text */
+    color: gold;
+    margin-top: 20px;
+}
+
+/* Zentriertes Logo unterhalb des Headers */
+.logo-container {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.logo {
+    max-width: 300px; /* Passe die Größe des Logos an */
+    height: auto;
 }
 
 nav.side-menu {
