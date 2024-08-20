@@ -12,53 +12,67 @@ header {
     padding: 20px 0;
     text-align: center;
     border-bottom: 1px solid #ccc;
+    position: relative; /* Notwendig für die Positionierung des Hamburger-Menüs */
+}
+
+.header-content {
+    margin: auto;
+    width: 100%;
 }
 
 .logo {
-    width: auto;  /* Stelle das Logo zentrisch und entsprechend der natürlichen Größe dar */
-    max-width: 100%; /* Stelle sicher, dass das Logo nicht über den Bildschirm hinausgeht */
+    max-width: 100%; /* Logo nimmt maximal verfügbare Breite, beschränkt auf seine natürliche Größe */
     height: auto;
+}
+
+.hamburger-menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 30px;
+    height: 25px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+}
+
+.hamburger-menu span {
+    display: block;
+    height: 3px;
+    background-color: #333;
 }
 
 nav {
     display: none; /* Startzustand des Menüs ist versteckt */
     background-color: #333;
-    position: absolute;
-    top: 100%;
     width: 100%;
+    position: absolute;
+    top: 60px; /* Positionierung direkt unter dem Header */
     left: 0;
+    padding: 10px 0;
 }
 
 nav ul {
-    list-style: none;
+    list-style-type: none;
     padding: 0;
     margin: 0;
-    text-align: center;
 }
 
 nav ul li {
-    padding: 10px 0;
+    text-align: center;
+    padding: 10px;
 }
 
 nav ul li a {
     color: white;
     text-decoration: none;
-    padding: 10px 20px;
+    font-weight: bold;
 }
 
-.hamburger-menu {
-    cursor: pointer;
-    position: absolute;
-    right: 10px;  /* Positionierung nach Bedarf anpassen */
-    top: -50px;   /* Positionierung außerhalb des Headers */
-}
-
-.hamburger-menu span {
-    display: block;
-    width: 30px;
-    height: 3px;
-    background-color: black;
-    margin: 5px 0;
+nav ul li a:hover,
+nav ul li a:active {
+    background-color: #555;
 }
 
 main {
@@ -67,9 +81,15 @@ main {
 
 section {
     background-color: white;
-    margin-bottom: 20px;
     padding: 20px;
+    margin-bottom: 20px;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+img {
+    width: 100%; /* Bilder nehmen die Breite ihres Containers an */
+    height: auto;
+    margin-bottom: 20px;
 }
 
 footer {
@@ -79,21 +99,47 @@ footer {
     padding: 10px 0;
 }
 
+/* Formular-Stile */
 form {
     background-color: #fff;
     padding: 20px;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    margin-top: 20px;
 }
 
-form label, form input[type="text"], form input[type="email"], form textarea, form button {
+form label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+form input[type="text"],
+form input[type="email"],
+form textarea {
     width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
     margin-bottom: 10px;
 }
 
-/* Responsive Design */
+form button {
+    background-color: #5c67f2;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #4a54e1;
+}
+
+/* Anpassungen für kleine Bildschirme */
 @media (max-width: 768px) {
-    .hamburger-menu span {
-        width: 20px; /* Smaller width for mobile */
+    .hamburger-menu {
+        top: 20px; /* Anpassung der Position auf kleineren Bildschirmen */
+    }
+
+    header {
+        padding: 10px 0; /* Reduziertes Padding im Header */
     }
 }
