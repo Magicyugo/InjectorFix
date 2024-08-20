@@ -12,25 +12,20 @@ header {
     padding: 20px 0;
     text-align: center;
     border-bottom: 1px solid #ccc;
-    position: relative; /* Für das positionierte Hamburger-Menü */
-}
-
-.header-content {
-    max-width: 100%; /* Logo Container */
-    margin: auto;
 }
 
 .logo {
-    width: 100%; /* Logo nimmt die volle Breite seines Containers ein */
+    width: auto;  /* Stelle das Logo zentrisch und entsprechend der natürlichen Größe dar */
+    max-width: 100%; /* Stelle sicher, dass das Logo nicht über den Bildschirm hinausgeht */
     height: auto;
 }
 
 nav {
     display: none; /* Startzustand des Menüs ist versteckt */
     background-color: #333;
-    width: 100%; /* Vollbreite Navigation */
     position: absolute;
-    top: 100%; /* Direkt unter dem Header */
+    top: 100%;
+    width: 100%;
     left: 0;
 }
 
@@ -38,26 +33,24 @@ nav ul {
     list-style: none;
     padding: 0;
     margin: 0;
+    text-align: center;
 }
 
 nav ul li {
-    text-align: center;
     padding: 10px 0;
 }
 
 nav ul li a {
-    display: block;
     color: white;
     text-decoration: none;
-    padding: 10px;
+    padding: 10px 20px;
 }
 
 .hamburger-menu {
-    display: inline-block;
     cursor: pointer;
     position: absolute;
-    right: 20px;
-    top: 10px;
+    right: 10px;  /* Positionierung nach Bedarf anpassen */
+    top: -50px;   /* Positionierung außerhalb des Headers */
 }
 
 .hamburger-menu span {
@@ -79,13 +72,6 @@ section {
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
-img {
-    max-width: 100%;
-    height: auto;
-    display: block;
-    margin-bottom: 20px;
-}
-
 footer {
     background-color: #333;
     color: white;
@@ -93,7 +79,6 @@ footer {
     padding: 10px 0;
 }
 
-/* Formular-Stile */
 form {
     background-color: #fff;
     padding: 20px;
@@ -101,42 +86,14 @@ form {
     margin-top: 20px;
 }
 
-form label {
-    display: block;
-    margin-bottom: 5px;
-}
-
-form input[type="text"],
-form input[type="email"],
-form textarea {
+form label, form input[type="text"], form input[type="email"], form textarea, form button {
     width: 100%;
-    padding: 10px;
     margin-bottom: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-}
-
-form button {
-    background-color: #5c67f2;
-    color: white;
-    border: none;
-    padding: 10px 15px;
-    font-size: 16px;
-    border-radius: 4px;
-    cursor: pointer;
-}
-
-form button:hover {
-    background-color: #4a54e1;
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
     .hamburger-menu span {
         width: 20px; /* Smaller width for mobile */
-    }
-
-    .logo {
-        width: 80%; /* Smaller logo for mobile */
     }
 }
