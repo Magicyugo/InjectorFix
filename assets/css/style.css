@@ -1,120 +1,36 @@
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f4f4f4;
-    color: #333;
-}
-
-header {
-    background-color: #007bff; /* Blau */
-    color: white;
-    padding: 20px 0;
-    text-align: center;
-    position: relative;
-}
-
-.header-content {
-    max-width: 1200px;
-    margin: auto;
-    padding: 0 20px;
-}
-
-.menu-icon {
-    font-size: 50px; /* Größerer Hamburger */
-    cursor: pointer;
-    color: gold; /* Goldene Farbe */
-    margin-top: 20px; /* Platzierung unter dem Text */
-}
-
-nav.side-menu {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.8);
-    display: none;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    z-index: 1000;
-}
-
-nav.side-menu ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-nav.side-menu ul li {
-    margin: 20px 0;
-}
-
-nav.side-menu ul li a {
-    color: white;
-    font-size: 24px;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-main {
-    padding: 20px;
-    max-width: 1200px;
-    margin: auto;
-}
-
-section {
-    padding: 50px 0;
-    border-bottom: 1px solid #ddd;
-}
-
-footer {
-    background-color: #333;
-    color: white;
-    text-align: center;
-    padding: 10px 0;
-    margin-top: 20px;
-}
-
-form {
-    max-width: 600px;
-    margin: 20px auto;
+/* Styles für die Produktdetails innerhalb der Kategorie "Über uns" */
+#about {
     padding: 20px;
     background-color: #f9f9f9;
     border: 1px solid #ddd;
     border-radius: 5px;
+    margin-top: 20px;
 }
 
-form label {
+#about h2,
+#about h3 {
+    color: #333;
+}
+
+#about p {
+    margin-bottom: 15px;
+    line-height: 1.6;
+}
+
+#about img {
+    max-width: 100%;
+    height: auto;
+    margin: 20px 0;
     display: block;
-    margin-bottom: 8px;
-    font-weight: bold;
 }
 
-form input[type="text"],
-form input[type="email"],
-form textarea {
-    width: calc(100% + 0.5cm); /* Breite um 0,5 cm erhöht */
-    padding: 10px;
-    margin-bottom: 20px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box; /* Damit das Padding korrekt berücksichtigt wird */
+#about .features ul,
+#about .test-types ul {
+    list-style-type: disc;
+    padding-left: 20px;
 }
 
-form textarea {
-    height: 150px; /* Größeres Nachrichtenfeld */
-}
-
-form button[type="submit"] {
-    background-color: #007bff;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-form button[type="submit"]:hover {
-    background-color: #0056b3;
+#about .features ul li,
+#about .test-types ul li {
+    margin-bottom: 10px;
 }
