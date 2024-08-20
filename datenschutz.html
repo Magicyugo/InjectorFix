@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Datenschutzerklärung - InjectorFix</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <img src="assets/Images/IMG_5975.jpeg" alt="InjectorFix Logo" class="logo">
+        </div>
+    </header>
+
+    <div class="hamburger-menu">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+    <nav>
+        <ul>
+            <li><a href="index.html#about">Über uns</a></li>
+            <li><a href="index.html#services">Dienstleistungen</a></li>
+            <li><a href="index.html#prices">Preise</a></li>
+            <li><a href="index.html#process">Abwicklung</a></li>
+            <li><a href="index.html#order">Bestellung</a></li>
+            <li><a href="index.html#contact">Kontakt</a></li>
+            <li><a href="impressum.html">Impressum</a></li>
+            <li><a href="agb.html">AGB</a></li>
+            <li><a href="datenschutz.html">Datenschutzerklärung</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section id="datenschutz">
+            <h2>Datenschutzerklärung</h2>
+
+            <h3>1. Allgemeine Hinweise</h3>
+            <p>Die folgenden Hinweise geben einen einfachen Überblick darüber, was mit Ihren personenbezogenen Daten passiert, wenn Sie unsere Website besuchen. Personenbezogene Daten sind alle Daten, mit denen Sie persönlich identifiziert werden können. Ausführliche Informationen zum Thema Datenschutz entnehmen Sie unserer Datenschutzerklärung.</p>
+
+            <h3>2. Datenerfassung auf unserer Website</h3>
+            <h4>Wer ist verantwortlich für die Datenerfassung auf dieser Website?</h4>
+            <p>Die Datenverarbeitung auf dieser Website erfolgt durch den Websitebetreiber. Dessen Kontaktdaten können Sie dem Impressum dieser Website entnehmen.</p>
+
+            <h4>Wie erfassen wir Ihre Daten?</h4>
+            <p>Ihre Daten werden zum einen dadurch erhoben, dass Sie uns diese mitteilen. Hierbei kann es sich z.B. um Daten handeln, die Sie in ein Kontaktformular eingeben.</p>
+            <p>Andere Daten werden automatisch beim Besuch der Website durch unsere IT-Systeme erfasst. Das sind vor allem technische Daten (z.B. Internetbrowser, Betriebssystem oder Uhrzeit des Seitenaufrufs). Die Erfassung dieser Daten erfolgt automatisch, sobald Sie unsere Website betreten.</p>
+
+            <h4>Wofür nutzen wir Ihre Daten?</h4>
+            <p>Ein Teil der Daten wird erhoben, um eine fehlerfreie Bereitstellung der Website zu gewährleisten. Andere Daten können zur Analyse Ihres Nutzerverhaltens verwendet werden.</p>
+
+            <h3>3. Ihre Rechte</h3>
+            <p>Sie haben das Recht, jederzeit Auskunft über Herkunft, Empfänger und Zweck Ihrer gespeicherten personenbezogenen Daten zu erhalten. Sie haben außerdem ein Recht, die Berichtigung, Sperrung oder Löschung dieser Daten zu verlangen. Hierzu sowie zu weiteren Fragen zum Thema Datenschutz können Sie sich jederzeit an uns wenden.</p>
+
+            <h3>4. Analyse-Tools und Tools von Drittanbietern</h3>
+            <p>Beim Besuch unserer Website kann Ihr Surf-Verhalten statistisch ausgewertet werden. Das geschieht vor allem mit Cookies und mit sogenannten Analyseprogrammen. Die Analyse Ihres Surf-Verhaltens erfolgt in der Regel anonym; das Surf-Verhalten kann nicht zu Ihnen zurückverfolgt werden. Sie können dieser Analyse widersprechen oder sie durch die Nichtbenutzung bestimmter Tools verhindern.</p>
+
+            <h3>5. Datensicherheit</h3>
+            <p>Wir sichern unsere Website und sonstigen Systeme durch technische und organisatorische Maßnahmen gegen Verlust, Zerstörung, Zugriff, Veränderung oder Verbreitung Ihrer Daten durch unbefugte Personen. Trotz regelmäßiger Kontrollen ist ein vollständiger Schutz gegen alle Gefahren jedoch nicht möglich.</p>
+
+            <h3>6. Speicherdauer und Datenlöschung</h3>
+            <p>Ihre personenbezogenen Daten werden nur so lange gespeichert, wie dies zur Erreichung des jeweiligen Speicherzwecks erforderlich ist oder wie es die gesetzlichen Aufbewahrungsfristen vorsehen. Nach Wegfall des Speicherzwecks oder Ablauf der gesetzlichen Fristen werden die Daten routinemäßig und entsprechend den gesetzlichen Vorschriften gelöscht.</p>
+
+            <h3>7. Kontaktaufnahme</h3>
+            <p>Wenn Sie uns per E-Mail oder über ein Kontaktformular Anfragen zukommen lassen, werden Ihre Angaben aus der Anfrage inklusive der von Ihnen dort angegebenen Kontaktdaten zwecks Bearbeitung der Anfrage und für den Fall von Anschlussfragen bei uns gespeichert. Diese Daten geben wir nicht ohne Ihre Einwilligung weiter.</p>
+
+            <h3>8. Aktualität und Änderung dieser Datenschutzerklärung</h3>
+            <p>Diese Datenschutzerklärung ist aktuell gültig und hat den Stand August 2024. Durch die Weiterentwicklung unserer Website oder aufgrund geänderter gesetzlicher oder behördlicher Vorgaben kann es notwendig werden, diese Datenschutzerklärung zu ändern.</p>
+
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 InjectorFix. Alle Rechte vorbehalten.</p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const menuIcon = document.querySelector('.hamburger-menu');
+            const nav = document.querySelector('nav');
+
+            menuIcon.addEventListener('click', function() {
+                nav.style.display = nav.style.display === 'block' ? 'none' : 'block';
+            });
+
+            // Menü schließen, wenn ein Link angeklickt wird
+            document.querySelectorAll('nav a').forEach(item => {
+                item.addEventListener('click', () => {
+                    nav.style.display = 'none';
+                });
+            });
+        });
+    </script>
+</body>
+</html>
