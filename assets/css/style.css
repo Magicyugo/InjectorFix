@@ -6,7 +6,7 @@ body {
     color: #333;
 }
 
-/* Header mit Logo und Hamburger Menü */
+/* Header mit doppelt so großem Logo */
 header {
     background-color: #fff; /* Weißer Hintergrund für das Logo */
     text-align: center;
@@ -21,16 +21,19 @@ header {
 }
 
 .logo {
-    max-width: 150px; /* Größe des Logos */
+    max-width: 300px; /* Doppelte Größe des Logos */
     height: auto;
-    margin-bottom: 10px; /* Abstand zum Hamburger-Menü */
+    margin-bottom: 10px;
 }
 
+/* Hamburger-Menü außerhalb des Headers */
 .menu-icon {
     font-size: 40px;
     cursor: pointer;
     color: #333;
-    margin-top: 10px; /* Abstand zum Logo */
+    margin-left: 20px; /* Links positioniert */
+    margin-top: -30px; /* Position oberhalb des „Über uns“-Textes */
+    position: absolute;
 }
 
 nav.side-menu {
@@ -66,7 +69,7 @@ nav.side-menu ul li a {
 /* Hauptinhalt */
 main {
     padding: 20px;
-    max-width: 1000px; /* Begrenze die maximale Breite */
+    max-width: 1000px;
     margin: auto;
 }
 
@@ -113,7 +116,7 @@ form textarea {
     margin-bottom: 20px;
     border: 1px solid #ccc;
     border-radius: 4px;
-    box-sizing: border-box; /* Damit das Padding korrekt berücksichtigt wird */
+    box-sizing: border-box;
 }
 
 form textarea {
@@ -131,28 +134,4 @@ form button[type="submit"] {
 
 form button[type="submit"]:hover {
     background-color: #0056b3;
-}
-
-#about h2,
-#about h3,
-#services h2,
-#services h3 {
-    color: #333;
-}
-
-#about p,
-#services p {
-    margin-bottom: 15px;
-    line-height: 1.6;
-}
-
-#services .features ul,
-#services .test-types ul {
-    list-style-type: disc;
-    padding-left: 20px;
-}
-
-#services .features ul li,
-#services .test-types ul li {
-    margin-bottom: 10px;
 }
