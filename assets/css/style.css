@@ -35,7 +35,7 @@ header {
     cursor: pointer;
     position: relative;
     margin: 20px auto; /* Abstand vom Header und zentriert */
-    z-index: 1000;
+    z-index: 999; /* Angepasst, damit das Menü im geöffneten Zustand davor bleibt */
     background-color: #ccc; /* Grauer Hintergrund für Sichtbarkeit */
     border-radius: 5px; /* Abgerundete Ecken für ein besseres Design */
 }
@@ -57,7 +57,7 @@ nav {
     top: 100px; /* Positionierung direkt unter dem Hamburger-Menü */
     left: 0;
     padding: 10px 0;
-    z-index: 999;
+    z-index: 1000; /* Sicherstellen, dass es über dem Hamburger-Menü liegt */
 }
 
 nav ul {
