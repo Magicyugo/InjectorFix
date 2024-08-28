@@ -12,7 +12,7 @@ header {
     padding: 20px 0;
     text-align: center;
     border-bottom: 1px solid #ccc;
-    position: relative; /* Notwendig für die Positionierung des Hamburger-Menüs */
+    position: relative;
 }
 
 .header-content {
@@ -21,7 +21,7 @@ header {
 }
 
 .logo {
-    max-width: 100%; /* Logo nimmt maximal verfügbare Breite, beschränkt auf seine natürliche Größe */
+    max-width: 100%;
     height: auto;
 }
 
@@ -32,34 +32,14 @@ header {
     justify-content: space-around;
     width: 30px;
     height: 25px;
-    position: absolute;
-    top: 10px;
     cursor: pointer;
-}
-
-/* Positioniere das Hamburger-Menü über "Über uns" */
-@media (max-width: 768px) {
-    .hamburger-menu {
-        left: 10px; /* Position auf kleineren Bildschirmen */
-    }
-}
-
-@media (min-width: 769px) {
-    .hamburger-menu {
-        left: 10px; /* Position auf größeren Bildschirmen */
-        top: 50px; /* Höhe, um über "Über uns" zu erscheinen */
-    }
-}
-
-.hamburger-menu span {
-    display: block;
-    height: 3px;
-    background-color: #007bff; /* Blau für den Hamburger-Button */
+    position: absolute; /* Position außerhalb des Headers */
+    left: 10px;
 }
 
 /* Das Hamburger-Menü bleibt immer sichtbar */
 nav {
-    display: none; /* Startzustand des Menüs ist versteckt */
+    display: none;
     background-color: #333;
     width: 100%;
     position: absolute;
@@ -102,7 +82,7 @@ section {
 }
 
 img {
-    width: 100%; /* Bilder nehmen die Breite ihres Containers an */
+    width: 100%;
     height: auto;
     margin-bottom: 20px;
 }
@@ -151,33 +131,32 @@ form button:hover {
 /* Anpassungen für kleine Bildschirme */
 @media (max-width: 768px) {
     .hamburger-menu {
-        left: 10px; /* Position des Hamburger-Menüs auf kleineren Bildschirmen */
+        top: 20px; /* Position des Hamburger-Menüs auf kleinen Bildschirmen */
     }
 
     header {
-        padding: 10px 0; /* Reduziertes Padding im Header */
+        padding: 10px 0;
     }
 }
 
 /* Anpassungen für große Bildschirme (Desktops) */
 @media (min-width: 769px) {
     .logo {
-        max-width: 70%; /* Logo um 30% kleiner auf großen Bildschirmen */
+        max-width: 70%; /* Verkleinere das Logo um 30% auf großen Bildschirmen */
     }
 
     .hamburger-menu {
-        left: 10px; /* Position des Hamburger-Menüs auf großen Bildschirmen */
-        top: 50px; /* Positioniere das Menü über "Über uns" */
+        top: 220px; /* Positioniere das Hamburger-Menü oberhalb von "Über uns" */
     }
 
     img {
-        max-width: 450px; /* Begrenze die Breite der Bilder auf großen Bildschirmen */
-        margin: 0 auto; /* Zentriere die Bilder */
-        display: block; /* Stellt sicher, dass die Bilder zentriert sind */
+        max-width: 450px;
+        margin: 0 auto;
+        display: block;
     }
 
     section {
-        max-width: 800px; /* Begrenze die Breite der Sektionen */
-        margin: 20px auto; /* Zentriere die Sektionen auf großen Bildschirmen */
+        max-width: 800px;
+        margin: 20px auto;
     }
 }
