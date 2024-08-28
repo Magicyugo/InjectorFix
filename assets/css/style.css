@@ -145,3 +145,21 @@ form button:hover {
         padding: 10px 0; /* Reduziertes Padding im Header */
     }
 }
+
+/* Anpassungen für große Bildschirme (Desktops) */
+@media (min-width: 769px) {
+    .logo {
+        max-width: 50%; /* Beschränke die Größe des Logos auf großen Bildschirmen */
+    }
+
+    img {
+        max-width: 600px; /* Begrenze die Breite der Bilder auf großen Bildschirmen */
+        margin: 0 auto; /* Zentriere die Bilder */
+        display: block; /* Stellt sicher, dass die Bilder zentriert sind */
+    }
+
+    section {
+        max-width: 800px; /* Begrenze die Breite der Sektionen */
+        margin: 20px auto; /* Zentriere die Sektionen auf großen Bildschirmen */
+    }
+}
