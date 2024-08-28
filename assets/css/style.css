@@ -34,8 +34,21 @@ header {
     height: 25px;
     position: absolute;
     top: 10px;
-    right: 10px;
     cursor: pointer;
+}
+
+/* Positioniere das Hamburger-Menü über "Über uns" */
+@media (max-width: 768px) {
+    .hamburger-menu {
+        left: 10px; /* Position auf kleineren Bildschirmen */
+    }
+}
+
+@media (min-width: 769px) {
+    .hamburger-menu {
+        left: 10px; /* Position auf größeren Bildschirmen */
+        top: 50px; /* Höhe, um über "Über uns" zu erscheinen */
+    }
 }
 
 .hamburger-menu span {
@@ -138,7 +151,7 @@ form button:hover {
 /* Anpassungen für kleine Bildschirme */
 @media (max-width: 768px) {
     .hamburger-menu {
-        top: 20px; /* Anpassung der Position auf kleineren Bildschirmen */
+        left: 10px; /* Position des Hamburger-Menüs auf kleineren Bildschirmen */
     }
 
     header {
@@ -149,11 +162,16 @@ form button:hover {
 /* Anpassungen für große Bildschirme (Desktops) */
 @media (min-width: 769px) {
     .logo {
-        max-width: 50%; /* Beschränke die Größe des Logos auf großen Bildschirmen */
+        max-width: 70%; /* Logo um 30% kleiner auf großen Bildschirmen */
+    }
+
+    .hamburger-menu {
+        left: 10px; /* Position des Hamburger-Menüs auf großen Bildschirmen */
+        top: 50px; /* Positioniere das Menü über "Über uns" */
     }
 
     img {
-        max-width: 450px; /* Begrenze die Breite der Bilder auf großen Bildschirmen auf 450px (um 25% kleiner als vorher) */
+        max-width: 450px; /* Begrenze die Breite der Bilder auf großen Bildschirmen */
         margin: 0 auto; /* Zentriere die Bilder */
         display: block; /* Stellt sicher, dass die Bilder zentriert sind */
     }
