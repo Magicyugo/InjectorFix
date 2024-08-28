@@ -35,13 +35,12 @@ header {
     position: relative; /* Positionierung unterhalb des Headers */
     margin: 20px auto; /* Abstand vom Header und zentriert */
     z-index: 1000; /* Sicherstellen, dass es über anderen Elementen liegt */
-    background-color: #fff; /* Hintergrundfarbe hinzufügen, damit es sichtbar ist */
 }
 
 .hamburger-menu span {
     display: block;
     height: 4px; /* Dickere Balken für den Hamburger-Button */
-    background-color: #007bff;
+    background-color: #007bff; /* Setze die Balkenfarbe auf Blau */
     margin: 5px 0;
 }
 
