@@ -12,7 +12,6 @@ header {
     padding: 14px 0; /* Header um 30% kleiner gemacht */
     text-align: center;
     border-bottom: 1px solid #ccc;
-    position: relative;
 }
 
 .header-content {
@@ -21,7 +20,7 @@ header {
 }
 
 .logo {
-    max-width: 70%; /* Logo um 30% verkleinert */
+    max-width: 70%; /* Verkleinere das Logo um 30% */
     height: auto;
 }
 
@@ -33,9 +32,8 @@ header {
     width: 30px;
     height: 25px;
     cursor: pointer;
-    position: absolute;
-    top: 180px; /* Position außerhalb des Headers */
-    left: 10px;
+    position: relative; /* Statische Positionierung unterhalb des Headers */
+    margin: 20px auto; /* Abstand vom Header und zentriert */
 }
 
 .hamburger-menu span {
@@ -138,7 +136,7 @@ form button:hover {
 /* Anpassungen für kleine Bildschirme */
 @media (max-width: 768px) {
     .hamburger-menu {
-        top: 180px; /* Position des Hamburger-Menüs auf kleinen Bildschirmen, außerhalb des Headers */
+        margin-top: 20px; /* Abstand auf kleinen Bildschirmen */
         left: 10px;
     }
 
@@ -154,7 +152,7 @@ form button:hover {
     }
 
     .hamburger-menu {
-        top: 180px; /* Positioniere das Hamburger-Menü oberhalb von "Über uns", außerhalb des Headers */
+        margin-top: 20px; /* Abstand auf großen Bildschirmen */
         left: 10px; 
     }
 
