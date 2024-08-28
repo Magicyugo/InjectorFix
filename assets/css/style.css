@@ -38,9 +38,9 @@ header {
 
 .hamburger-menu span {
     display: block;
-    height: 3px;
+    height: 4px; /* Dickere Balken für den Hamburger-Button */
     background-color: #007bff;
-    margin: 4px 0;
+    margin: 5px 0;
 }
 
 /* Navigation Menü Stil */
