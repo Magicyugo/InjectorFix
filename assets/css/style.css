@@ -29,18 +29,22 @@ header {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    width: 30px;
-    height: 25px;
+    align-items: center;
+    width: 40px; /* Breiter gemacht für bessere Sichtbarkeit */
+    height: 35px; /* Höher gemacht für bessere Sichtbarkeit */
     cursor: pointer;
-    position: relative; /* Positionierung unterhalb des Headers */
+    position: relative;
     margin: 20px auto; /* Abstand vom Header und zentriert */
-    z-index: 1000; /* Sicherstellen, dass es über anderen Elementen liegt */
+    z-index: 1000;
+    background-color: #ccc; /* Grauer Hintergrund für Sichtbarkeit */
+    border-radius: 5px; /* Abgerundete Ecken für ein besseres Design */
 }
 
 .hamburger-menu span {
     display: block;
+    width: 30px; /* Länge der Hamburger-Balken */
     height: 4px; /* Dickere Balken für den Hamburger-Button */
-    background-color: #007bff; /* Setze die Balkenfarbe auf Blau */
+    background-color: #007bff; /* Blaue Farbe für die Balken */
     margin: 5px 0;
 }
 
@@ -50,10 +54,10 @@ nav {
     background-color: #333;
     width: 100%;
     position: absolute;
-    top: 60px;
+    top: 100px; /* Positionierung direkt unter dem Hamburger-Menü */
     left: 0;
     padding: 10px 0;
-    z-index: 999; /* Sicherstellen, dass es über anderen Elementen liegt */
+    z-index: 999;
 }
 
 nav ul {
@@ -139,7 +143,7 @@ form button:hover {
 /* Anpassungen für kleine Bildschirme */
 @media (max-width: 768px) {
     .hamburger-menu {
-        margin-top: 20px; /* Abstand auf kleinen Bildschirmen */
+        margin-top: 20px;
         left: 10px;
     }
 
@@ -151,11 +155,11 @@ form button:hover {
 /* Anpassungen für große Bildschirme (Desktops) */
 @media (min-width: 769px) {
     .logo {
-        max-width: 70%; /* Verkleinere das Logo um 30% auf großen Bildschirmen */
+        max-width: 70%;
     }
 
     .hamburger-menu {
-        margin-top: 20px; /* Abstand auf großen Bildschirmen */
+        margin-top: 20px;
         left: 10px; 
     }
 
