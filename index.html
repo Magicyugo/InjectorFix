@@ -14,13 +14,13 @@
     </header>
     
     <!-- Hamburger-Menü hier platziert, außerhalb des Headers -->
-    <div class="hamburger-menu">
+    <div class="hamburger-menu" onclick="toggleMenu()">
         <span></span>
         <span></span>
         <span></span>
     </div>
 
-    <nav>
+    <nav id="sideMenu">
         <ul>
             <li><a href="#ueber-uns">Über uns</a></li>
             <li><a href="#dienstleistungen">Dienstleistungen</a></li>
@@ -107,13 +107,14 @@
             <ol>
                 <li>Vertragsabschluss: Der Vertrag kommt durch die Bestätigung der Bestellung durch InjectorFix zustande.</li>
                 <li>Zahlung: Die Bezahlung erfolgt vor der Erbringung der Dienstleistung. Teilzahlungen und der Versand einzelner Düsen sind nicht möglich.</li>
-                <li>Eigentumsvorbehalt: Die Ware bleibt bis zur vollständigen Bezahlung Eigentum von InjectorFix.</li>
+                <li>Eigentumsvorbehalt: Die Ware bleibt bis zur vollständigen Bezahlung Eigentum von```html
+                InjectorFix.</li>
                 <li>Leistungsumfang: Die Reinigung und Prüfung umfasst die in der Beschreibung genannten Leistungen.</li>
-```html
                 <li>Transportschäden: Für Schäden, die beim Transport entstehen, übernimmt InjectorFix keine Haftung.</li>
                 <li>Haftungsausschluss: InjectorFix haftet nicht für Folgeschäden, die durch die Nutzung der gereinigten Einspritzdüsen entstehen könnten, wie z.B. Motorschäden oder erhöhter Kraftstoffverbrauch.</li>
                 <li>Rücksendung: Sollte das Paket nach Ablauf der Lagerfrist nicht abgeholt und zu InjectorFix zurückgeschickt werden, trägt der Kunde die zusätzlichen Versandkosten.</li>
                 <li>Datenschutz: Die Daten werden gemäß unserer Datenschutzerklärung verarbeitet. <a href="#datenschutz">Zur Datenschutzerklärung</a></li>
+                <li>Gesamtbetrag: Der Gesamtbetrag muss vollständig bezahlt werden, bevor die gereinigten Einspritzdüsen zurückgeschickt werden. Teilzahlungen und der Versand einzelner Düsen sind nicht möglich.</li>
             </ol>
         </section>
 
@@ -128,6 +129,16 @@
         <p>&copy; 2024 InjectorFix. Alle Rechte vorbehalten.</p>
     </footer>
 
-    <script src="assets/js/script.js"></script>
+    <!-- JavaScript zum Umschalten des Menüs -->
+    <script>
+        function toggleMenu() {
+            const menu = document.getElementById('sideMenu');
+            if (menu.style.display === 'block') {
+                menu.style.display = 'none';
+            } else {
+                menu.style.display = 'block';
+            }
+        }
+    </script>
 </body>
 </html>
