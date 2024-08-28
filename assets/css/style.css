@@ -153,7 +153,7 @@ form button:hover {
     }
 
     img {
-        max-width: 600px; /* Begrenze die Breite der Bilder auf großen Bildschirmen */
+        max-width: 450px; /* Begrenze die Breite der Bilder auf großen Bildschirmen auf 450px (um 25% kleiner als vorher) */
         margin: 0 auto; /* Zentriere die Bilder */
         display: block; /* Stellt sicher, dass die Bilder zentriert sind */
     }
