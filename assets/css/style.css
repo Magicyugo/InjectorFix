@@ -32,8 +32,9 @@ header {
     width: 30px;
     height: 25px;
     cursor: pointer;
-    position: relative; /* Statische Positionierung unterhalb des Headers */
+    position: relative; /* Positionierung unterhalb des Headers */
     margin: 20px auto; /* Abstand vom Header und zentriert */
+    z-index: 1000; /* Sicherstellen, dass es über anderen Elementen liegt */
 }
 
 .hamburger-menu span {
