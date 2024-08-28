@@ -40,9 +40,10 @@ header {
     display: block;
     height: 3px;
     background-color: #007bff;
+    margin: 4px 0;
 }
 
-/* Das Hamburger-Menü bleibt immer sichtbar */
+/* Navigation Menü Stil */
 nav {
     display: none;
     background-color: #333;
