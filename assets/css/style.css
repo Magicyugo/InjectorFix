@@ -33,9 +33,9 @@ header {
     width: 40px; /* Breiter gemacht für bessere Sichtbarkeit */
     height: 35px; /* Höher gemacht für bessere Sichtbarkeit */
     cursor: pointer;
-    position: relative; /* Zurück zu relative, um die normale Position zu behalten */
+    position: relative; /* Positioniert relativ zum Standardfluss */
     margin: 20px auto; /* Abstand vom Header und zentriert */
-    z-index: 999; /* Zurücksetzen des z-index */
+    z-index: 999; /* Höherer z-index, damit es über dem Menü bleibt */
     background-color: #ccc; /* Grauer Hintergrund für Sichtbarkeit */
     border-radius: 5px; /* Abgerundete Ecken für ein besseres Design */
     transition: transform 0.3s ease; /* Übergang für das X */
@@ -67,11 +67,11 @@ nav {
     display: none;
     background-color: #333;
     width: 100%;
-    position: absolute; /* Zurück zu absolute, um die ursprüngliche Position zu behalten */
-    top: 60px; /* Initiale Position */
+    position: absolute;
+    top: 70px; /* Setze es unter das Hamburger-Menü */
     left: 0;
     padding: 10px 0;
-    z-index: 1000; /* Zurücksetzen des z-index */
+    z-index: 1000; /* Sicherstellen, dass es über dem Hamburger-Menü liegt */
 }
 
 .hamburger-menu.open + nav {
