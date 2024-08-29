@@ -186,29 +186,12 @@ form button:hover {
 
     .hamburger-menu {
         margin-top: 20px;
-        left: 10px;
+        position: absolute;
+        top: 15px; /* Oben außerhalb des Headers */
+        left: 20px;
     }
 
-    .hamburger-menu.open span:nth-child(1) {
-        transform: rotate(45deg) translate(5px, 5px);
-    }
-
-    .hamburger-menu.open span:nth-child(2) {
-        opacity: 0;
-    }
-
-    .hamburger-menu.open span:nth-child(3) {
-        transform: rotate(-45deg) translate(5px, -5px);
-    }
-
-    img {
-        max-width: 450px;
-        margin: 0 auto;
-        display: block;
-    }
-
-    section {
-        max-width: 800px;
-        margin: 20px auto;
+    nav {
+        top: 70px; /* Position des Menüs unterhalb des Headers */
     }
 }
