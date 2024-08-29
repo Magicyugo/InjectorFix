@@ -122,12 +122,21 @@
             hamburger.classList.remove('open');
         }
 
-        // Schließt das Menü auf mobilen Geräten, wenn ein```html
-        // Schließt das Menü auf mobilen Geräten, wenn ein Link geklickt wird
+        // Event listener für das Schließen des Menüs auf Mobilgeräten
         document.querySelectorAll('#sideMenu ul li a').forEach(link => {
             link.addEventListener('click', () => {
                 closeMenu();
             });
+        });
+
+        // Schließen des Menüs durch Klicken```html
+        // Schließen des Menüs durch Klicken auf das X
+        document.querySelector('.hamburger-menu').addEventListener('click', (e) => {
+            if (e.target.closest('.hamburger-menu').classList.contains('open')) {
+                closeMenu();
+            } else {
+                toggleMenu();
+            }
         });
     </script>
 </body>
