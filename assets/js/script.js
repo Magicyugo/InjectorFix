@@ -1,4 +1,5 @@
 function toggleMenu() {
+    console.log("Hamburger menu clicked"); // Debugging-Zweck
     const menu = document.getElementById('sideMenu');
     const hamburger = document.querySelector('.hamburger-menu');
     if (menu.style.display === 'block') {
@@ -24,8 +25,7 @@ document.querySelectorAll('#sideMenu ul li a').forEach(link => {
     });
 });
 
-// Event listener für das```javascript
-// Schließen des Menüs durch Klicken auf das X
+// Event listener für das Schließen des Menüs durch Klicken auf das X
 document.querySelector('.hamburger-menu').addEventListener('click', (e) => {
     if (e.target.closest('.hamburger-menu').classList.contains('open')) {
         closeMenu();
