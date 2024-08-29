@@ -102,13 +102,12 @@
             <h2>Impressum</h2>
             <p><strong>InjectorFix</strong><br>Inhaber: Boban Malinic<br>Josef-Lumper-Str. 4<br>89257 Illertissen<br>Deutschland</p>
             <p>Telefon: 015776468752<br>E-Mail: Info@Malinic.net</p>
-            <p>Verantwortlich für den Inhalt gemäß § 55 Abs. 2 RStV: Boban Malinic</p>
+            <p>Verantwortlich für den Inhalt gemäß § 55 Abs. 2 RStV: Boban Malinic</p```html
             <p>Keine Gewährleistung oder Geld-zurück-Garantie für die durchgeführten Dienstleistungen. Transportschäden werden nicht übernommen. Im Rahmen der Kleinunternehmerregelung gemäß § 19 UStG wird keine Mehrwertsteuer ausgewiesen.</p>
         </section>
 
         <section id="agb">
-            <h2>Allgemeine Geschäftsbedingungen (```html
-                (AGB)</h2>
+            <h2>Allgemeine Geschäftsbedingungen (AGB)</h2>
             <ol>
                 <li>Vertragsabschluss: Der Vertrag kommt durch die Bestätigung der Bestellung durch InjectorFix zustande.</li>
                 <li>Zahlung: Die Bezahlung erfolgt vor der Erbringung der Dienstleistung. Teilzahlungen und der Versand einzelner Düsen sind nicht möglich.</li>
@@ -137,10 +136,13 @@
     <script>
         function toggleMenu() {
             const menu = document.getElementById('sideMenu');
+            const hamburger = document.querySelector('.hamburger-menu');
             if (menu.style.display === 'block') {
                 menu.style.display = 'none';
+                hamburger.classList.remove('open');
             } else {
                 menu.style.display = 'block';
+                hamburger.classList.add('open');
                 // Setze die Position des Menüs relativ zur Hamburger-Position
                 if (window.innerWidth >= 769) {
                     menu.style.top = (document.querySelector('.hamburger-menu').offsetTop + document.querySelector('.hamburger-menu').offsetHeight) + 'px';
