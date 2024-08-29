@@ -41,16 +41,10 @@ header {
     transition: transform 0.3s ease;
 }
 
-.hamburger-menu.open span:nth-child(1) {
-    transform: rotate(45deg) translate(5px, 5px);
-}
-
-.hamburger-menu.open span:nth-child(2) {
-    opacity: 0;
-}
-
+.hamburger-menu.open span:nth-child(1),
+.hamburger-menu.open span:nth-child(2),
 .hamburger-menu.open span:nth-child(3) {
-    transform: rotate(-45deg) translate(5px, -5px);
+    transition: none; /* Deaktiviert die Übergänge für das „X“ */
 }
 
 .hamburger-menu span {
@@ -68,7 +62,7 @@ nav {
     background-color: #333;
     width: 100%;
     position: absolute;
-    top: 100px; /* Anpassung für mobile Geräte */
+    top: 100px;
     left: 0;
     padding: 10px 0;
     z-index: 1000;
@@ -173,21 +167,16 @@ form button:hover {
         padding: 10px 0;
     }
 
+    /* Entfernen des "X"-Stils auf mobilen Geräten */
+    .hamburger-menu.open span:nth-child(1),
+    .hamburger-menu.open span:nth-child(2),
+    .hamburger-menu.open span:nth-child(3) {
+        transform: none;
+        opacity: 1;
+    }
+
     nav {
         top: 110px; /* Sicherstellen, dass das Menü weiter nach unten klappt */
-    }
-
-    /* Stil für das "X" auf kleinen Bildschirmen */
-    .hamburger-menu.open span:nth-child(1) {
-        transform: rotate(45deg) translate(6px, 6px);
-    }
-
-    .hamburger-menu.open span:nth-child(2) {
-        opacity: 0;
-    }
-
-    .hamburger-menu.open span:nth-child(3) {
-        transform: rotate(-45deg) translate(6px, -6px);
     }
 
     #impressum, #agb, #datenschutz {
@@ -204,6 +193,19 @@ form button:hover {
     .hamburger-menu {
         margin-top: 20px;
         left: 10px; 
+    }
+
+    /* Beibehalten des "X"-Stils auf Desktops */
+    .hamburger-menu.open span:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 5px);
+    }
+
+    .hamburger-menu.open span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger-menu.open span:nth-child(3) {
+        transform: rotate(-45deg) translate(5px, -5px);
     }
 
     img {
