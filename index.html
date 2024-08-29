@@ -122,9 +122,9 @@
             hamburger.classList.remove('open');
         }
 
-        // Funktion, um das Menü auf dem Handy zu schließen, wenn ein Link angeklickt wird
+        // Schließt das Menü auf mobilen Geräten, wenn ein Link geklickt wird
         document.querySelectorAll('#sideMenu ul li a').forEach(link => {
-           ```html
+            link.addEvent```html
             link.addEventListener('click', () => {
                 closeMenu();
             });
