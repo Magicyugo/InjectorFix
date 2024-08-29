@@ -1,197 +1,109 @@
-/* Grundlegende Stildefinitionen */
+/* Allgemeine Stile */
 body {
-    font-family: 'Arial', sans-serif;
-    background-color: #f4f4f4;
-    color: #333;
+    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
 }
 
 header {
-    background-color: #fff;
-    padding: 14px 0;
     text-align: center;
-    border-bottom: 1px solid #ccc;
-}
-
-.header-content {
-    margin: auto;
-    width: 100%;
+    padding: 20px;
 }
 
 .logo {
-    max-width: 70%;
-    height: auto;
+    max-width: 200px;
 }
 
-/* Hamburger-Menü Stil */
 .hamburger-menu {
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-    width: 40px;
-    height: 35px;
     cursor: pointer;
-    position: relative;
-    margin: 20px auto;
-    z-index: 1001;
-    background-color: #ccc;
-    border-radius: 5px;
-    transition: transform 0.3s ease;
-}
-
-.hamburger-menu.open span:nth-child(1) {
-    transform: rotate(45deg) translate(5px, 5px);
-}
-
-.hamburger-menu.open span:nth-child(2) {
-    opacity: 0;
-}
-
-.hamburger-menu.open span:nth-child(3) {
-    transform: rotate(-45deg) translate(5px, -5px);
+    margin: 10px;
 }
 
 .hamburger-menu span {
-    display: block;
     width: 30px;
-    height: 4px;
-    background-color: #007bff;
+    height: 3px;
+    background-color: blue;
     margin: 5px 0;
-    transition: all 0.3s ease;
+    transition: 0.4s;
 }
 
-/* Navigation Menü Stil */
-nav {
+#sideMenu {
     display: none;
-    background-color: #333;
-    width: 100%;
     position: absolute;
-    top: 70px; /* Angepasst, um unterhalb des Headers zu beginnen */
+    top: 70px;
     left: 0;
-    padding: 10px 0;
-    z-index: 1000;
+    width: 100%;
+    background-color: #333;
+    color: white;
+   ```css
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
 }
 
-.hamburger-menu.open + nav {
-    display: block;
-}
-
-nav ul {
-    list-style-type: none;
+#sideMenu ul {
     padding: 0;
     margin: 0;
 }
 
-nav ul li {
-    text-align: center;
+#sideMenu ul li {
     padding: 10px;
 }
 
-nav ul li a {
+#sideMenu ul li a {
     color: white;
     text-decoration: none;
-    font-weight: bold;
 }
 
-nav ul li a:hover,
-nav ul li a:active {
-    background-color: #555;
+#sideMenu ul li a:hover {
+    background-color: #575757;
 }
 
-main {
-    padding: 20px;
-}
-
-section {
-    background-color: white;
-    padding: 20px;
-    margin-bottom: 20px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-}
-
-img {
-    width: 100%;
-    height: auto;
-    margin-bottom: 20px;
-}
-
-footer {
-    background-color: #333;
-    color: white;
-    text-align: center;
-    padding: 10px 0;
-}
-
-/* Formular-Stile */
-form {
-    background-color: #fff;
-    padding: 20px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-}
-
-form label {
-    display: block;
-    margin-bottom: 5px;
-}
-
-form input[type="text"],
-form input[type="email"],
-form textarea {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    margin-bottom: 10px;
-}
-
-form textarea {
-    min-height: 150px;
-}
-
-form button {
-    background-color: #5c67f2;
-    color: white;
-    border: none;
-    padding: 10px 15px;
-    cursor: pointer;
-}
-
-form button:hover {
-    background-color: #4a54e1;
-}
-
-/* Anpassungen für kleine Bildschirme */
-@media (max-width: 768px) {
+@media (min-width: 768px) {
+    /* Stile für Desktops und größere Bildschirme */
     .hamburger-menu {
-        margin-top: 20px;
-        left: 10px;
-    }
-
-    header {
-        padding: 10px 0;
+        display: none;
     }
 
     nav {
-        top: 55px; /* Position unterhalb des Headers für kleine Bildschirme */
-    }
-}
-
-/* Anpassungen für große Bildschirme (Desktops) */
-@media (min-width: 769px) {
-    .logo {
-        max-width: 70%;
+        display: flex;
+        justify-content: center;
+        background-color: #333;
     }
 
-    .hamburger-menu {
-        margin-top: 20px;
-        position: absolute;
-        top: 15px; /* Oben außerhalb des Headers */
-        left: 20px;
+    nav ul {
+        display: flex;
+        list-style: none;
+        padding: 0;
+        margin: 0;
     }
 
-    nav {
-        top: 70px; /* Position des Menüs unterhalb des Headers */
+    nav ul li {
+        margin: 0 15px;
+    }
+
+    nav ul li a {
+        color: white;
+        text-decoration: none;
+    }
+
+    nav ul li a:hover {
+        background-color: #575757;
+    }
+
+    /* CSS für Bilder, um die Breite des Logos im Header zu übernehmen */
+    img {
+        max-width: 100%; /* Stellt sicher, dass die Bilder nicht größer als ihre Elterncontainer sind */
+    }
+
+    @media (min-width: 768px) {
+        /* Nur für Desktops und größere Bildschirme */
+        img {
+            width: auto; /* Passt die Breite automatisch an */
+            max-width: 600px; /* Beschränkt die maximale Breite, damit sie mit dem Header-Logo übereinstimmt */
+        }
     }
 }
