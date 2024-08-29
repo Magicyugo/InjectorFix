@@ -33,11 +33,11 @@ header {
     display: none;
     position: absolute;
     top: 70px;
+    left: ```css
     left: 0;
     width: 100%;
     background-color: #333;
     color: white;
-   ```css
     list-style: none;
     padding: 0;
     margin: 0;
@@ -96,14 +96,7 @@ header {
 
     /* CSS für Bilder, um die Breite des Logos im Header zu übernehmen */
     img {
-        max-width: 100%; /* Stellt sicher, dass die Bilder nicht größer als ihre Elterncontainer sind */
-    }
-
-    @media (min-width: 768px) {
-        /* Nur für Desktops und größere Bildschirme */
-        img {
-            width: auto; /* Passt die Breite automatisch an */
-            max-width: 600px; /* Beschränkt die maximale Breite, damit sie mit dem Header-Logo übereinstimmt */
-        }
+        width: auto;
+        max-width: 600px; /* Beschränkt die maximale Breite, damit sie mit dem Header-Logo übereinstimmt */
     }
 }
