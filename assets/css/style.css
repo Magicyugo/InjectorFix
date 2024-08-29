@@ -11,8 +11,8 @@ header {
 }
 
 .logo {
-    width: 100%; /* Rückkehr zur Standardgröße */
-    max-width: 600px; /* Zurücksetzen der maximalen Breite */
+    width: 100%;
+    max-width: 600px;
     height: auto;
 }
 
@@ -24,6 +24,7 @@ header {
     margin: 10px auto; /* Zentriert den Hamburger unter dem Logo */
 }
 
+.hamburger```css
 .hamburger-menu span {
     width: 30px;
     height: 3px;
@@ -33,24 +34,11 @@ header {
     transition: 0.3s;
 }
 
-/* Hamburger Menü im geöffneten Zustand */
-.hamburger-menu.open span:nth-child(1) {
-    transform: rotate(45deg) translate(5px, 5px);
-}
-
-.hamburger-menu.open span:nth-child(2) {
-    opacity: 0;
-}
-
-.hamburger-menu.open span:nth-child(3) {
-    transform: rotate(-45deg) translate(5px, -5px);
-}
-
-/* Seitenmenü Stile */
+/* Menü-Stile */
 #sideMenu {
-    display: none;
+    display: none; /* Standardmäßig ausgeblendet */
     position: absolute;
-    top: 100px; /* Stellt sicher, dass das Menü unterhalb des Hamburger-Symbols angezeigt wird */
+    top: 100px; /* Passt den Abstand vom oberen Rand an */
     left: 0;
     width: 100%;
     background-color: #333;
@@ -59,6 +47,7 @@ header {
     padding: 0;
     margin: 0;
     text-align: center;
+    z-index: 1000; /* Über anderen Elementen anzeigen */
 }
 
 #sideMenu ul {
@@ -79,9 +68,7 @@ header {
     background-color: #575757;
 }
 
-/* Responsives Design */
 @media (min-width: 768px) {
-    /* Stile für Desktops und größere Bildschirme */
     .hamburger-menu {
         display: none;
     }
@@ -110,7 +97,6 @@ header {
 
     nav ul li a:hover {
         background-color: #575757;
-    }
 }
 
 /* CSS für responsive Bilder */
