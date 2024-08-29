@@ -97,9 +97,6 @@
                 <button type="submit">Nachricht senden</button>
             </form>
         </section>
-
-        <!-- Impressum, AGB und Datenschutzerklärung aus dem Hauptinhalt entfernt -->
-
     </main>
 
     <footer>
@@ -112,12 +109,12 @@
             const menu = document.getElementById('sideMenu');
             if (menu.style.display === 'block') {
                 menu.style.display = 'none';
-           ```html
             } else {
                 menu.style.display = 'block';
                 // Positionierung des Menüs auf Desktop auf Höhe des Hamburger-Menüs
                 if (window.innerWidth >= 769) {
-                    menu.style.top = document.querySelector('.hamburger-menu').offsetHeight + 'px';
+                    menu.style.top = document.querySelector('.hamburger-menu').offsetTop + document.querySelector('.hamburger-menu').```html
+                    offsetHeight + 'px';
                 } else {
                     menu.style.top = '100px'; // Standardhöhe für mobile Geräte
                 }
