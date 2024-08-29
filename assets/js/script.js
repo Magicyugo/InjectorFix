@@ -1,25 +1,16 @@
 document.addEventListener('DOMContentLoaded', function () {
-    // Funktion zum Umschalten des Hamburger-Menüs
+    const hamburger = document.querySelector('.hamburger-menu');
+    const menu = document.getElementById('sideMenu');
+
+    // Funktion zum Umschalten des Menüs
     function toggleMenu() {
-        const menu = document.getElementById('sideMenu');
-        if (menu.style.display === 'block') {
-            menu.style.display = 'none';
-        } else {
+        if (menu.style.display === 'none' || menu.style.display === '') {
             menu.style.display = 'block';
+        } else {
+            menu.style.display = 'none';
         }
     }
 
-    // Funktion zum Schließen des Hamburger-Menüs
-    function closeMenu() {
-        const menu = document.getElementById('sideMenu');
-        menu.style.display = 'none';
-    }
-
-    // Event Listener für das Öffnen und Schließen des Hamburger-Menüs
-    document.querySelector('.hamburger-menu').addEventListener('click', toggleMenu);
-
-    // Event Listener für das Schließen des Menüs, wenn eine Option ausgewählt wird
-    document.querySelectorAll('#sideMenu ul li a').forEach(item => {
-        item.addEventListener('click', closeMenu);
-    });
+    // Hamburger-Klick-Ereignis
+    hamburger.addEventListener('click', toggleMenu);
 });
