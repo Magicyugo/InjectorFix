@@ -33,9 +33,9 @@ header {
     width: 40px; /* Breiter gemacht für bessere Sichtbarkeit */
     height: 35px; /* Höher gemacht für bessere Sichtbarkeit */
     cursor: pointer;
-    position: relative;
+    position: relative; /* Ändere zu relative, um die Position des Menüs zu beeinflussen */
     margin: 20px auto; /* Abstand vom Header und zentriert */
-    z-index: 999; /* Angepasst, damit das Menü im geöffneten Zustand davor bleibt */
+    z-index: 1001; /* Sicherstellen, dass es über dem Menü bleibt */
     background-color: #ccc; /* Grauer Hintergrund für Sichtbarkeit */
     border-radius: 5px; /* Abgerundete Ecken für ein besseres Design */
     transition: transform 0.3s ease; /* Übergang für das X */
@@ -67,17 +67,15 @@ nav {
     display: none;
     background-color: #333;
     width: 100%;
-    position: absolute;
-    top: 60px; /* Initiale Position */
+    position: fixed; /* Fixiere die Position des Menüs */
+    top: 70px; /* Setze es unter das Hamburger-Menü */
     left: 0;
     padding: 10px 0;
-    z-index: 1000; /* Sicherstellen, dass es über dem Hamburger-Menü liegt */
+    z-index: 1000; /* Sicherstellen, dass es unter dem Hamburger-Menü liegt */
 }
 
-/* Menü wird unterhalb des Hamburger-Symbols angezeigt */
 .hamburger-menu.open + nav {
     display: block;
-    top: calc(60px + 40px); /* Menü wird unterhalb des Hamburger-Symbols angezeigt */
 }
 
 nav ul {
@@ -169,6 +167,7 @@ form button:hover {
     .hamburger-menu {
         margin-top: 20px;
         left: 10px;
+        z-index: 1001; /* Höherer z-index, um sicherzustellen, dass es über dem Menü bleibt */
     }
 
     header {
