@@ -21,15 +21,15 @@
 
     <nav id="sideMenu">
         <ul>
-            <li><a href="#ueber-uns">Über uns</a></li>
-            <li><a href="#dienstleistung">Dienstleistung</a></li>
-            <li><a href="#preise">Preise</a></li>
-            <li><a href="#abwicklung">Abwicklung</a></li>
-            <li><a href="#bestellung">Bestellung</a></li>
-            <li><a href="#kontakt">Kontakt</a></li>
-            <li><a href="#impressum">Impressum</a></li>
-            <li><a href="#agb">AGB</a></li>
-            <li><a href="#datenschutz">Datenschutz</a></li>
+            <li><a href="#ueber-uns" onclick="closeMenu()">Über uns</a></li>
+            <li><a href="#dienstleistung" onclick="closeMenu()">Dienstleistung</a></li>
+            <li><a href="#preise" onclick="closeMenu()">Preise</a></li>
+            <li><a href="#abwicklung" onclick="closeMenu()">Abwicklung</a></li>
+            <li><a href="#bestellung" onclick="closeMenu()">Bestellung</a></li>
+            <li><a href="#kontakt" onclick="closeMenu()">Kontakt</a></li>
+            <li><a href="#impressum" onclick="closeMenu()">Impressum</a></li>
+            <li><a href="#agb" onclick="closeMenu()">AGB</a></li>
+            <li><a href="#datenschutz" onclick="closeMenu()">Datenschutz</a></li>
         </ul>
     </nav>
 
@@ -116,11 +116,9 @@
         <section id="agb">
             <h2>AGB</h2>
             <p>1. Allgemeines<br>Diese Allgemeinen Geschäftsbedingungen (AGB) gelten für alle Lieferungen und Leistungen von InjectorFix.</p>
-            <p>2. Vertragsabschluss<br>Ein Vertrag kommt durch die Bestellung des Kunden und die Annahme durch InjectorFix zustande.</p>
-            <p>3. Preise und Zahlung<brHier ist der vollständige `index.html` Code, fortgesetzt:
-
-```html
-            Die Preise verstehen sich in Euro. Die Zahlung erfolgt per Vorkasse.</p>
+            <p>2```html
+            . Vertragsabschluss<br>Ein Vertrag kommt durch die Bestellung des Kunden und die Annahme durch InjectorFix zustande.</p>
+            <p>3. Preise und Zahlung<br>Die Preise verstehen sich in Euro. Die Zahlung erfolgt per Vorkasse.</p>
             <p>4. Lieferung<br>Die Lieferung erfolgt an die vom Kunden angegebene Adresse. Die Versandkosten trägt der Kunde.</p>
             <p>5. Eigentumsvorbehalt<br>Die Ware bleibt bis zur vollständigen Bezahlung Eigentum von InjectorFix.</p>
             <p>6. Gewährleistung<br>Die Gewährleistung richtet sich nach den gesetzlichen Bestimmungen.</p>
@@ -150,6 +148,13 @@
                 menu.style.display = 'block';
                 hamburger.classList.add('open');
             }
+        }
+
+        function closeMenu() {
+            const menu = document.getElementById('sideMenu');
+            const hamburger = document.querySelector('.hamburger-menu');
+            menu.style.display = 'none';
+            hamburger.classList.remove('open');
         }
     </script>
 </body>
