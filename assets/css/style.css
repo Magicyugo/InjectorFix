@@ -11,8 +11,8 @@ header {
 }
 
 .logo {
-    width: 105%; /* Erhöht die Größe des Logos um 5% */
-    max-width: 630px; /* Erhöht die maximale Breite um 5% */
+    width: 100%; /* Rückkehr zur Standardgröße */
+    max-width: 600px; /* Zurücksetzen der maximalen Breite */
     height: auto;
 }
 
