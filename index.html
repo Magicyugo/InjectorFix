@@ -115,13 +115,20 @@
             }
         }
 
-        function```html
-        closeMenu() {
+        function closeMenu() {
             const menu = document.getElementById('sideMenu');
             const hamburger = document.querySelector('.hamburger-menu');
             menu.style.display = 'none';
             hamburger.classList.remove('open');
         }
+
+        // Funktion, um das Menü auf dem Handy zu schließen, wenn ein Link angeklickt wird
+        document.querySelectorAll('#sideMenu ul li a').forEach(link => {
+           ```html
+            link.addEventListener('click', () => {
+                closeMenu();
+            });
+        });
     </script>
 </body>
 </html>
