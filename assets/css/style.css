@@ -74,6 +74,12 @@ nav {
     z-index: 1000; /* Sicherstellen, dass es über dem Hamburger-Menü liegt */
 }
 
+/* Menü wird unterhalb des Hamburger-Symbols angezeigt */
+.hamburger-menu.open + nav {
+    display: block;
+    top: calc(60px + 40px); /* Menü wird unterhalb des Hamburger-Symbols angezeigt */
+}
+
 nav ul {
     list-style-type: none;
     padding: 0;
