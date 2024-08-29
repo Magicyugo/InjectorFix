@@ -68,7 +68,7 @@ nav {
     background-color: #333;
     width: 100%;
     position: absolute;
-    top: 60px;
+    top: 70px; /* Angepasst, um unterhalb des Headers zu beginnen */
     left: 0;
     padding: 10px 0;
     z-index: 1000;
@@ -171,6 +171,10 @@ form button:hover {
 
     header {
         padding: 10px 0;
+    }
+
+    nav {
+        top: 55px; /* Position unterhalb des Headers für kleine Bildschirme */
     }
 }
 
