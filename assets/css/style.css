@@ -11,7 +11,9 @@ header {
 }
 
 .logo {
-    max-width: 300px; /* Wieder zurück auf Standardgröße */
+    width: 100%;
+    max-width: 600px; /* Die gleiche maximale Breite wie andere Bilder */
+    height: auto;
 }
 
 .hamburger-menu {
@@ -19,14 +21,11 @@ header {
     flex-direction: column;
     align-items: center;
     cursor: pointer;
-    margin: 10px;
+    margin: 10px auto; /* Zentriert den Hamburger unter dem Logo */
 }
 
 .hamburger-menu span {
-    width: 30px;
-    height: 3```css
-/* Hamburger Menü Stile */
-.hamburger-menu span {
+    width```css
     width: 30px;
     height: 3px;
     background-color: #333;
@@ -52,7 +51,7 @@ header {
 #sideMenu {
     display: none;
     position: absolute;
-    top: 50px; /* Stellt sicher, dass das Menü unterhalb des Hamburger-Symbols angezeigt wird */
+    top: 100px; /* Stellt sicher, dass das Menü unterhalb des Hamburger-Symbols angezeigt wird */
     left: 0;
     width: 100%;
     background-color: #333;
@@ -119,7 +118,7 @@ header {
 .responsive-image {
     width: 100%;
     height: auto;
-    max-width: 600px; /* Beschränkt die maximale Breite, damit sie mit dem Header-Logo übereinstimmt */
+    max-width: 600px; /* Gleiche maximale Breite wie das Header-Logo */
     display: block;
     margin: 0 auto;
 }
