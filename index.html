@@ -3,108 +3,154 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>InjectorFix</title>
+    <title>InjectorFix - Professionelle Reinigung von Einspritzdüsen</title>
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
     <header>
         <div class="header-content">
-            <img src="assets/Images/IMG_5975.jpeg" alt="Firmenlogo" class="logo">
+            <img src="assets/Images/IMG_5975.jpeg" class="logo" alt="InjectorFix Logo">
         </div>
     </header>
-
-    <!-- Hamburger-Menü-Symbol -->
-    <div class="hamburger-menu" style="text-align: center;">
+    
+    <!-- Hamburger-Menü hier platziert -->
+    <div class="hamburger-menu" onclick="toggleMenu()">
         <span></span>
         <span></span>
         <span></span>
     </div>
 
-    <!-- Navigationsmenü -->
-    <nav id="sideMenu" style="display: none;">
+    <nav id="sideMenu">
         <ul>
-            <li><a href="#ueber-uns">Über uns</a></li>
-            <li><a href="#dienstleistung">Dienstleistung</a></li>
-            <li><a href="#preise">Preise</a></li>
-            <li><a href="#abwicklung">Abwicklung</a></li>
-            <li><a href="#bestellung">Bestellung</a></li>
-            <li><a href="#kontakt">Kontakt</a></li>
-            <li><a href="impressum.html">Impressum</a></li>
-            <li><a href="agb.html">AGB</a></li>
-            <li><a href="datenschutz.html">Datenschutz</a></li>
+            <li><a href="#ueber-uns" onclick="toggleMenu()">Über uns</a></li>
+            <li><a href="#dienstleistungen" onclick="toggleMenu()">Dienstleistungen</a></li>
+            <li><a href="#preise" onclick="toggleMenu()">Preise</a></li>
+            <li><a href="#abwicklung" onclick="toggleMenu()">Abwicklung</a></li>
+            <li><a href="#bestellung" onclick="toggleMenu()">Bestellung</a></li>
+            <li><a href="#kontakt" onclick="toggleMenu()">Kontakt</a></li>
+            <li><a href="#impressum" onclick="toggleMenu()">Impressum</a></li>
+            <li><a href="#agb" onclick="toggleMenu()">AGB</a></li>
+            <li><a href="#datenschutz" onclick="toggleMenu()">Datenschutzerklärung</a></li>
         </ul>
     </nav>
 
     <main>
-        <!-- Inhalt der Seite -->
+        <!-- Alle deine Inhaltsabschnitte bleiben gleich -->
         <section id="ueber-uns">
             <h2>Über uns</h2>
-            <p>Willkommen bei InjectorFix Ihrem zuverlässigen Partner für die professionelle Reinigung von Einspritzdüsen. Unser Unternehmen hat es sich zur Aufgabe gemacht, die Leistung und Effizienz Ihres Fahrzeugs durch eine fachgerechte Wartung der Einspritzdüsen zu maximieren. Mit unserem hochmodernen Gerät, dem Thinkcar TK-IMT602, bieten wir eine gründliche und schonende Reinigung, die dafür sorgt, dass Ihre Einspritzdüsen wieder optimal arbeiten.</p>
+            <p>Willkommen bei InjectorFix, Ihrem zuverlässigen Partner für die professionelle Reinigung von Einspritzdüsen. Unser Unternehmen hat es sich zur Aufgabe gemacht, die Leistung und Effizienz Ihres Fahrzeugs durch eine fachgerechte Wartung der Einspritzdüsen zu maximieren. Mit unserem hochmodernen Gerät, dem Thinkcar TK-IMT602, bieten wir eine gründliche und schonende Reinigung, die dafür sorgt, dass Ihre Einspritzdüsen wieder optimal arbeiten.</p>
             <p>Unser Service ist einfach und bequem: Sie schicken uns Ihre ausgebauten Einspritzdüsen zu, wir reinigen sie sorgfältig und schicken sie Ihnen nach erfolgreicher Überprüfung in einwandfreiem Zustand zurück. Dabei legen wir großen Wert auf Qualität, Präzision und Kundenzufriedenheit.</p>
             <p>Bei InjectorFix stehen Sie als Kunde im Mittelpunkt. Wir verstehen, wie wichtig ein reibungslos funktionierendes Fahrzeug für Sie ist und setzen alles daran, Ihnen einen schnellen und verlässlichen Service zu bieten. Vertrauen Sie auf unsere Expertise und lassen Sie uns dafür sorgen, dass Ihre Einspritzdüsen wieder in Bestform sind.</p>
         </section>
 
-        <section id="dienstleistung">
-            <h2>Dienstleistung</h2>
+        <section id="dienstleistungen">
+            <h2>Dienstleistungen</h2>
             <p>Der THINKCAR TK-IMT602 ist eine hochleistungsfähige Reinigungs- und Inspektionsanlage für Kraftstoffeinspritzdüsen, entwickelt von THINKCAR. Er kombiniert die Funktionen der Reinigung und Prüfung von Einspritzdüsen in einem Gerät und ist speziell für den Einsatz in der Wartung und Reparatur von Automobilen ausgelegt.</p>
-            <h3>Hauptfunktionen:</h3>
             <ul>
-                <li>Ultraschallreinigung</li>
-                <li>Kraftstoffinjektortest</li>
-                <li>Einheitlichkeitstest</li>
-                <li>Leckprüfung</li>
+                <li><strong>Ultraschallreinigung</strong></li>
+                <li><strong>Kraftstoffinjektortest</strong></li>
+                <li><strong>Einheitlichkeitstest</strong></li>
+                <li><strong>Leckprüfung</strong></li>
             </ul>
-            <img src="assets/Images/IMG_5939.png" alt="THINKCAR TK-IMT602" class="responsive-image">
+            <img src="assets/Images/IMG_5939.png" alt="Dienstleistung Bild 1">
             <h3>Hauptmerkmale</h3>
             <p>Der THINKCAR TK-IMT602 ist ein mechatronisches Gerät, das Ultraschallreinigungstechnologie und eine Mikrocomputer-gesteuerte Ölkreislauf-Steuerung kombiniert. Diese innovative Technologie ermöglicht nicht nur eine gründliche Reinigung, sondern auch eine präzise Detektion von Problemen bei Einspritzdüsen. Das Gerät simuliert unterschiedliche Motorbetriebsbedingungen und gewährleistet damit eine optimale Prüfung und Reinigung der Einspritzdüsen für Automobile und Motorräder.</p>
-            <img src="assets/Images/IMG_5940.png" alt="Hauptmerkmale" class="responsive-image">
+            <img src="assets/Images/IMG_5940.png" alt="Dienstleistung Bild 2">
             <h3>Ultraschallreinigung</h3>
             <p>Der THINKCAR Injektorreiniger nutzt fortschrittliche Ultraschalltechnologie, um Kohlenstoffablagerungen und Verunreinigungen in den Einspritzdüsen effektiv zu entfernen. Durch den unabhängigen Ultraschallreinigungsmechanismus und die benutzerfreundliche LED-Anzeige wird eine gründliche Reinigung und einfache Datenüberwachung sichergestellt.</p>
-            <img src="assets/Images/IMG_5941.png" alt="Ultraschallreinigung" class="responsive-image">
+            <img src="assets/Images/IMG_5941.png" alt="Dienstleistung Bild 3">
             <h3>Kraftstoffinjektortest</h3>
-            <p>Der TK-IMT602 simuliert verschiedene Betriebsbedingungen des Motors und führt umfassende Tests an Injektoren durch, die in unterschiedlichen Fahrzeugen verwendet werden. Dazu gehören Gleichmäßigkeitstests, Sprühfähigkeitstests, Einspritzflusstests, Lecktests und weitere Verfahren, um den Zustand der Kraftstoffinjektoren präzise zu analysieren.</p>
-            <img src="assets/Images/IMG_5942.png" alt="Kraftstoffinjektortest" class="responsive-image">
+            <p>Der TK-IMT603 simuliert verschiedene Betriebsbedingungen des Motors und führt umfassende Tests an Injektoren durch, die in unterschiedlichen Fahrzeugen verwendet werden. Dazu gehören Gleichmäßigkeitstests, Sprühfähigkeitstests, Einspritzflusstests, Lecktests und weitere Verfahren, um den Zustand der Kraftstoffinjektoren präzise zu analysieren.</p>
+            <img src="assets/Images/IMG_5942.png" alt="Dienstleistung Bild 4">
         </section>
 
         <section id="preise">
             <h2>Preise</h2>
-            <p>Einzelprüfung und Reinigung: 44,99 €</p>
-            <p>Satz mit 4 Einspritzdüsen: 159,99 €</p>
-            <p>Satz mit 6 Einspritzdüsen: 209,99 €</p>
-            <p>Aufgrund der Kleinunternehmerregelung nach §19 UStG erheben wir keine Mehrwertsteuer und weisen diese daher auch nicht aus.</p>
+            <p><strong>Einzelprüfung und Reinigung:</strong> 44,99 € pro Einspritzdüse</p>
+            <p><strong>Satz mit 4 Einspritzdüsen:</strong> 159,99 €</p>
+            <p><strong>Satz mit 6 Einspritzdüsen:</strong> 209,99 €</p>
+            <p>Wegen der Kleinunternehmerregelung wird keine Mehrwertsteuer ausgewiesen.</p>
         </section>
 
         <section id="abwicklung">
             <h2>Abwicklung</h2>
             <p>Füllen Sie im Bereich „Bestellung“ das Bestellformular aus, drucken dieses aus und legen es mit zu den ausgebauten und gut verpackten Einspritzdüsen. Im Anschluss verschicken Sie das Paket an:</p>
-            <p><strong>InjectorFix</strong><br>
-            Inh.: Boban Malinic<br>
-            Josef-Lumper-Str. 4<br>
-            89257 Illertissen</p>
-            <p>Sobald die Ware bei uns eintrifft, wird der Wareneingang dokumentiert, sowie der Prüf- und Reinigungsprozess Ihrer eingeschickten Einspritzdüsen. Nach erfolgreicher Instandsetzung wird Ihnen per Mail ein Bericht zugeschickt und nach erfolgreichem Zahlungseingang wieder die Düsen an Sie verschickt.</p>
-            <p>Für weitere Bestellungen oder Fragen können Sie auch unser Kontaktformular nutzen. Alternativ besteht nach vorheriger Absprache die Möglichkeit, die Einspritzdüsen persönlich bei uns vorbeizubringen.</p>
+            <p><strong>InjectorFix</strong><br>(Inh: Boban Malinic)<br>Josef-Lumper-Str.4<br>89257 Illertissen</p>
+            <p>Sobald die Ware bei uns eintrifft, wird der Wareneingang dokumentiert, sowie der Prüf-und Reinigungsprozess Ihrer eingeschickten Einspritzdüsen. Nach erfolgreicher Instandsetzung wird Ihnen per Mail ein Bericht zugeschickt und nach erfolgreichem Zahlungseingang werden die Düsen an Sie verschickt. Eine Rechnung wird aufgrund der Kleinunternehmerregelung ohne Mehrwertsteuer ausgestellt.</p>
         </section>
 
         <section id="bestellung">
             <h2>Bestellung</h2>
-            <p><a href="Bestellformular.pdf" download>Bestellformular herunterladen</a></p>
+            <p>Hier können Sie das Bestellformular herunterladen:</p>
+            <a href="assets/Bestellformular.pdf" target="_blank">Bestellformular herunterladen</a>
         </section>
 
         <section id="kontakt">
             <h2>Kontakt</h2>
             <form action="https://formspree.io/f/mdknlqjy" method="POST">
-                <label for="name">Name:</label>
+                <label for="name">Ihr Name:</label>
                 <input type="text" id="name" name="name" required>
-                <label for="email">E-Mail:</label>
+                <label for="email">Ihre E-Mail-Adresse:</label>
                 <input type="email" id="email" name="email" required>
-                <label for="message">Nachricht:</label>
-                <textarea id="message" name="message" rows="5" required></textarea>
-                <button type="submit">Senden</button>
+                <label for="message">Ihre Nachricht:</label>
+                <textarea id="message" name="message" rows="8" required></textarea>
+                <button type="submit">Nachricht senden</button>
             </form>
+        </section>
+
+        <section id="impressum">
+            <h2>Impressum</h2>
+            <p><strong>InjectorFix</strong><br>Inhaber: Boban Malinic<br>Josef-Lumper-Str. 4<br>89257 Illertissen<br>Deutschland</p>
+            <p>Telefon: 015776468752<br>E-Mail: Info@Malinic.net</p>
+            <p>Verantwortlich für den Inhalt gemäß § 55 Abs. 2 RStV: Boban Malinic</p```html
+            <p>Keine Gewährleistung oder Geld-zurück-Garantie für die durchgeführten Dienstleistungen. Transportschäden werden nicht übernommen. Im Rahmen der Kleinunternehmerregelung gemäß § 19 UStG wird keine Mehrwertsteuer ausgewiesen.</p>
+        </section>
+
+        <section id="agb">
+            <h2>Allgemeine Geschäftsbedingungen (AGB)</h2>
+            <ol>
+                <li>Vertragsabschluss: Der Vertrag kommt durch die Bestätigung der Bestellung durch InjectorFix zustande.</li>
+                <li>Zahlung: Die Bezahlung erfolgt vor der Erbringung der Dienstleistung. Teilzahlungen und der Versand einzelner Düsen sind nicht möglich.</li>
+                <li>Eigentumsvorbehalt: Die Ware bleibt bis zur vollständigen Bezahlung Eigentum von InjectorFix.</li>
+                <li>Leistungsumfang: Die Reinigung und Prüfung umfasst die in der Beschreibung genannten Leistungen.</li>
+                <li>Transportschäden: Für Schäden, die beim Transport entstehen, übernimmt InjectorFix keine Haftung.</li>
+                <li>Haftungsausschluss: InjectorFix haftet nicht für Folgeschäden, die durch die Nutzung der gereinigten Einspritzdüsen entstehen könnten, wie z.B. Motorschäden oder erhöhter Kraftstoffverbrauch.</li>
+                <li>Rücksendung: Sollte das Paket nach Ablauf der Lagerfrist nicht abgeholt und zu InjectorFix zurückgeschickt werden, trägt der Kunde die zusätzlichen Versandkosten.</li>
+                <li>Datenschutz: Die Daten werden gemäß unserer Datenschutzerklärung verarbeitet. <a href="#datenschutz">Zur Datenschutzerklärung</a></li>
+                <li>Gesamtbetrag: Der Gesamtbetrag muss vollständig bezahlt werden, bevor die gereinigten Einspritzdüsen zurückgeschickt werden. Teilzahlungen und der Versand einzelner Düsen sind nicht möglich.</li>
+            </ol>
+        </section>
+
+        <section id="datenschutz">
+            <h2>Datenschutzerklärung</h2>
+            <p>Ihre Daten werden ausschließlich zur Abwicklung Ihrer Bestellung verwendet und nicht an Dritte weitergegeben. Nach Ablauf von einem Jahr werden alle personenbezogenen Daten gelöscht, sofern keine gesetzlichen Aufbewahrungsfristen bestehen.</p>
+            <p>Weitere Informationen finden Sie in unserer <a href="#impressum">Datenschutzerklärung</a>.</p>
         </section>
     </main>
 
+    <footer>
+        <p>&copy; 2024 InjectorFix. Alle Rechte vorbehalten.</p>
+    </footer>
+
     <!-- JavaScript zum Umschalten des Menüs -->
-    <script src="assets/js/script.js"></script>
+    <script>
+        function toggleMenu() {
+            const menu = document.getElementById('sideMenu');
+            const hamburger = document.querySelector('.hamburger-menu');
+            if (menu.style.display === 'block') {
+                menu.style.display = 'none';
+                hamburger.classList.remove('open');
+            } else {
+                menu.style.display = 'block';
+                hamburger.classList.add('open');
+                // Setze die Position des Menüs relativ zur Hamburger-Position
+                if (window.innerWidth >= 769) {
+                    menu.style.top = (document.querySelector('.hamburger-menu').offsetTop + document.querySelector('.hamburger-menu').offsetHeight) + 'px';
+                } else {
+                    menu.style.top = '100px'; // Standardhöhe für mobile Geräte
+                }
+            }
+        }
+    </script>
 </body>
 </html>
