@@ -28,7 +28,6 @@
             <li><a href="#abwicklung" onclick="toggleMenu()">Abwicklung</a></li>
             <li><a href="#bestellung" onclick="toggleMenu()">Bestellung</a></li>
             <li><a href="#kontakt" onclick="toggleMenu()">Kontakt</a></li>
-            <!-- Direkt zu den separaten HTML-Dateien verlinken -->
             <li><a href="impressum.html">Impressum</a></li>
             <li><a href="agb.html">AGB</a></li>
             <li><a href="datenschutz.html">Datenschutzerklärung</a></li>
@@ -98,35 +97,6 @@
                 <button type="submit">Nachricht senden</button>
             </form>
         </section>
-
-        <section id="impressum">
-            <h2>Impressum</h2>
-            <p><strong>InjectorFix</strong><br>Inhaber: Boban Malinic<br>Josef-Lumper-Str. 4<br>89257 Illertissen<br>Deutschland</p>
-            <p>Telefon: 015776468752<br>E-Mail: Info@Malinic.net</p>
-            <p>Verantwortlich für den Inhalt gemäß § 55 Abs. 2 RStV: Boban Malinic</p>
-            <p>Keine Gewährleistung oder Geld-zurück-Garantie für die durchgeführten Dienstleistungen. Transportschäden werden nicht übernommen. Im Rahmen der Kleinunterunternehmerregelung gemäß § 19 UStG wird keine Mehrwertsteuer ausgewiesen.</p>
-        </section>
-
-        <section id="agb">
-            <h2>Allgemeine Geschäftsbedingungen (AGB)</h2>
-            <ol>
-                <li>Vertragsabschluss: Der Vertrag kommt durch die Bestätigung der Bestellung durch InjectorFix zustande.</li>
-                <li>Zahlung: Die Bezahlung erfolgt vor der Erbringung der Dienstleistung. Teilzahlungen und der Versand einzelner Düsen sind nicht möglich.</li>
-                <li>Eigentumsvorbehalt: Die Ware bleibt bis zur vollständigen Bezahlung Eigentum von InjectorFix.</li>
-                <li>Leistungsumfang: Die Reinigung und Prüfung umfasst die in der Beschreibung genannten Leistungen.</li>
-                <li>Transportschäden: Für Schäden, die beim Transport entstehen, übernimmt InjectorFix keine Haftung.</li>
-                <li>Haftungsausschluss: InjectorFix haftet nicht für Folgeschäden, die durch die Nutzung der gereinigten Einspritzdüsen entstehen könnten, wie z.B. Motorschäden oder erhöhter Kraftstoffverbrauch.</li>
-                <li>Rücksendung: Sollte das Paket nach Ablauf der Lagerfrist nicht abgeholt und zu InjectorFix zurückgeschickt werden, trägt der Kunde die zusätzlichen Versandkosten.</li>
-                <li>Datenschutz: Die Daten werden gemäß unserer Datenschutzerklärung verarbeitet. <a href="#datenschutz">Zur Datenschutzerklärung</a></li>
-                <li>Gesamtbetrag: Der Gesamtbetrag muss vollständig bezahlt werden, bevor die gereinigten Einspritzdüsen zurückgeschickt werden. Teilzahlungen und der Versand einzelner Düsen sind nicht möglich.</li>
-            </ol>
-        </section>
-
-        <section id="datenschutz">
-            <h2>Datenschutzerklärung</h2>
-            <p>Ihre Daten werden ausschließlich zur Abwicklung Ihrer Bestellung verwendet und nicht an Dritte weitergegeben. Nach Ablauf von einem Jahr werden alle personenbezogenen Daten gelöscht, sofern keine gesetzlichen Aufbewahrungsfristen bestehen.</p>
-            <p>Weitere Informationen finden Sie in unserer <a href="#impressum">Datenschutzerklärung</a>.</p>
-        </section>
     </main>
 
     <footer>
@@ -146,12 +116,21 @@
                 hamburger.classList.add('open');
                 // Setze die Position des Menüs relativ zur Hamburger-Position
                 if (window.innerWidth >= 769) {
-                    menu.style.top = (document.querySelector('.hamburger-menu').offsetTop + document.querySelector('.hamburger-menu').offsetHeight) + 'px';
+                    menu.style.top = (document.querySelector```html
+('.hamburger-menu').offsetTop + document.querySelector('.hamburger-menu').offsetHeight) + 'px';
                 } else {
                     menu.style.top = '100px'; // Standardhöhe für mobile Geräte
                 }
             }
         }
+
+        // Schließen des Menüs bei Klick auf einen Link
+        document.querySelectorAll('#sideMenu a').forEach(link => {
+            link.addEventListener('click', () => {
+                document.getElementById('sideMenu').style.display = 'none';
+                document.querySelector('.hamburger-menu').classList.remove('open');
+            });
+        });
     </script>
 </body>
 </html>
