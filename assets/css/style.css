@@ -68,10 +68,10 @@ nav {
     background-color: #333;
     width: 100%;
     position: absolute;
-    top: 100px;
+    top: 60px; /* Setze das Menü direkt unter den Header */
     left: 0;
     padding: 10px 0;
-    z-index: 1000;
+    z-index: 1002; /* Höherer z-index als der Hamburger */
 }
 
 .hamburger-menu.open + nav {
@@ -167,6 +167,7 @@ form button:hover {
     .hamburger-menu {
         margin-top: 20px;
         left: 10px;
+        z-index: 1001; /* Sicherstellen, dass es unter dem Menü bleibt */
     }
 
     header {
@@ -179,12 +180,9 @@ form button:hover {
         position: fixed; /* Setze das Menü fest über den Inhalt */
     }
 
-    /* Stil für das "X" auf mobilen Geräten entfernen */
-    .hamburger-menu.open span:nth-child(1),
-    .hamburger-menu.open span:nth-child(2),
-    .hamburger-menu.open span:nth-child(3) {
-        transform: none;
-        opacity: 1;
+    /* Deaktivieren der Klickfunktion des Hamburger-Symbols, wenn das Menü geöffnet ist */
+    .hamburger-menu.open {
+        pointer-events: none;
     }
 
     #impressum, #agb, #datenschutz {
