@@ -41,10 +41,16 @@ header {
     transition: transform 0.3s ease;
 }
 
-.hamburger-menu.open span:nth-child(1),
-.hamburger-menu.open span:nth-child(2),
+.hamburger-menu.open span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburger-menu.open span:nth-child(2) {
+    opacity: 0;
+}
+
 .hamburger-menu.open span:nth-child(3) {
-    transition: none; /* Deaktiviert die Übergänge für das „X“ */
+    transform: rotate(-45deg) translate(5px, -5px);
 }
 
 .hamburger-menu span {
@@ -167,16 +173,18 @@ form button:hover {
         padding: 10px 0;
     }
 
-    /* Entfernen des "X"-Stils auf mobilen Geräten */
+    nav {
+        top: 60px; /* Setze das Menü direkt unter den Header */
+        z-index: 1002; /* Höherer z-index als der Hamburger */
+        position: fixed; /* Setze das Menü fest über den Inhalt */
+    }
+
+    /* Stil für das "X" auf mobilen Geräten entfernen */
     .hamburger-menu.open span:nth-child(1),
     .hamburger-menu.open span:nth-child(2),
     .hamburger-menu.open span:nth-child(3) {
         transform: none;
         opacity: 1;
-    }
-
-    nav {
-        top: 110px; /* Sicherstellen, dass das Menü weiter nach unten klappt */
     }
 
     #impressum, #agb, #datenschutz {
