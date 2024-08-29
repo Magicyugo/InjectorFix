@@ -11,29 +11,48 @@ header {
 }
 
 .logo {
-    max-width: 200px;
+    max-width: 300px; /* Wieder zurück auf Standardgröße */
 }
 
 .hamburger-menu {
     display: flex;
     flex-direction: column;
+    align-items: center;
     cursor: pointer;
     margin: 10px;
 }
 
 .hamburger-menu span {
     width: 30px;
+    height: 3```css
+/* Hamburger Menü Stile */
+.hamburger-menu span {
+    width: 30px;
     height: 3px;
-    background-color: blue;
-    margin: 5px 0;
-    transition: 0.4s;
+    background-color: #333;
+    margin: 5px;
+    display: block;
+    transition: 0.3s;
 }
 
+/* Hamburger Menü im geöffneten Zustand */
+.hamburger-menu.open span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburger-menu.open span:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger-menu.open span:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* Seitenmenü Stile */
 #sideMenu {
     display: none;
     position: absolute;
-    top: 70px;
-    left: ```css
+    top: 50px; /* Stellt sicher, dass das Menü unterhalb des Hamburger-Symbols angezeigt wird */
     left: 0;
     width: 100%;
     background-color: #333;
@@ -62,6 +81,7 @@ header {
     background-color: #575757;
 }
 
+/* Responsives Design */
 @media (min-width: 768px) {
     /* Stile für Desktops und größere Bildschirme */
     .hamburger-menu {
@@ -93,10 +113,51 @@ header {
     nav ul li a:hover {
         background-color: #575757;
     }
+}
 
-    /* CSS für Bilder, um die Breite des Logos im Header zu übernehmen */
-    img {
-        width: auto;
-        max-width: 600px; /* Beschränkt die maximale Breite, damit sie mit dem Header-Logo übereinstimmt */
-    }
+/* CSS für responsive Bilder */
+.responsive-image {
+    width: 100%;
+    height: auto;
+    max-width: 600px; /* Beschränkt die maximale Breite, damit sie mit dem Header-Logo übereinstimmt */
+    display: block;
+    margin: 0 auto;
+}
+
+/* Formularstile */
+form {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    background-color: #f9f9f9;
+}
+
+form label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+form input,
+form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+form button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #575757;
 }
