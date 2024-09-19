@@ -98,7 +98,7 @@ nav ul li a:active {
 }
 
 main {
-    padding: 60px 20px 20px; /* Abstand oben für den Header, damit Inhalt nicht überlappt */
+    padding: 20px 20px 20px; /* Abstand oben für den Header, damit Inhalt nicht überlappt */
 }
 
 section {
