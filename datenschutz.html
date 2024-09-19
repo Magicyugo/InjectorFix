@@ -13,12 +13,12 @@
         </div>
     </header>
 
-    <div class="hamburger-menu">
+    <div class="hamburger-menu" onclick="toggleMenu()">
         <span></span>
         <span></span>
         <span></span>
     </div>
-    <nav>
+    <nav id="sideMenu">
         <ul>
             <li><a href="index.html#about">Über uns</a></li>
             <li><a href="index.html#services">Dienstleistungen</a></li>
@@ -69,6 +69,11 @@
             <p>Diese Datenschutzerklärung ist aktuell gültig und hat den Stand August 2024. Durch die Weiterentwicklung unserer Website oder aufgrund geänderter gesetzlicher oder behördlicher Vorgaben kann es notwendig werden, diese Datenschutzerklärung zu ändern.</p>
 
         </section>
+        
+        <!-- Link zurück zur Startseite -->
+        <div style="text-align:center; margin-top: 40px;">
+            <a href="index.html" style="font-size: 1.5em; padding: 10px 20px; background-color: #007bff; color: white; text-decoration: none; border-radius: 5px;">Zurück zur Startseite</a>
+        </div>
     </main>
 
     <footer>
@@ -76,18 +81,23 @@
     </footer>
 
     <script>
+        function toggleMenu() {
+            const menu = document.getElementById('sideMenu');
+            const hamburger = document.querySelector('.hamburger-menu');
+            if (menu.style.display === 'block') {
+                menu.style.display = 'none';
+                hamburger.classList.remove('open');
+            } else {
+                menu.style.display = 'block';
+                hamburger.classList.add('open');
+            }
+        }
+
         document.addEventListener('DOMContentLoaded', function () {
-            const menuIcon = document.querySelector('.hamburger-menu');
-            const nav = document.querySelector('nav');
-
-            menuIcon.addEventListener('click', function() {
-                nav.style.display = nav.style.display === 'block' ? 'none' : 'block';
-            });
-
-            // Menü schließen, wenn ein Link angeklickt wird
             document.querySelectorAll('nav a').forEach(item => {
                 item.addEventListener('click', () => {
-                    nav.style.display = 'none';
+                    document.getElementById('sideMenu').style.display = 'none';
+                    document.querySelector('.hamburger-menu').classList.remove('open');
                 });
             });
         });
