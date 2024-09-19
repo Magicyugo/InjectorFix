@@ -13,12 +13,12 @@
         </div>
     </header>
 
-    <div class="hamburger-menu">
+    <div class="hamburger-menu" onclick="toggleMenu()">
         <span></span>
         <span></span>
         <span></span>
     </div>
-    <nav>
+    <nav id="sideMenu">
         <ul>
             <li><a href="index.html#about">Über uns</a></li>
             <li><a href="index.html#services">Dienstleistungen</a></li>
@@ -28,6 +28,7 @@
             <li><a href="index.html#contact">Kontakt</a></li>
             <li><a href="impressum.html">Impressum</a></li>
             <li><a href="agb.html">AGB</a></li>
+            <li><a href="datenschutz.html">Datenschutzerklärung</a></li>
         </ul>
     </nav>
 
@@ -37,7 +38,7 @@
 
             <h3>1. Geltungsbereich</h3>
             <p>Diese Allgemeinen Geschäftsbedingungen (AGB) gelten für alle Geschäftsbeziehungen zwischen InjectorFix, Inhaber: Boban Malinic, und seinen Kunden. Sie regeln die Bedingungen für die Reinigung und Überprüfung von Einspritzdüsen, die von Kunden an InjectorFix eingesendet werden.</p>
-            
+
             <h3>2. Vertragsabschluss</h3>
             <p>Ein Vertrag zwischen dem Kunden und InjectorFix kommt zustande, sobald der Kunde seine Einspritzdüsen einsendet und InjectorFix diese zur Reinigung annimmt. Eine Annahmebestätigung erfolgt durch eine schriftliche Bestätigung per E-Mail.</p>
 
@@ -48,10 +49,10 @@
 
             <h4>4.1 Keine Garantie und Gewährleistung</h4>
             <p>Bei der von InjectorFix angebotenen Dienstleistung handelt es sich um eine spezielle Reinigungsleistung für Einspritzdüsen. Da die Ergebnisse dieser Reinigung stark vom Zustand der eingesendeten Einspritzdüsen abhängen, besteht kein Anspruch auf eine Geld-zurück-Garantie oder Gewährleistung im rechtlichen Sinne. Jegliche Haftung für Folgeschäden, die durch den Einsatz der gereinigten Einspritzdüsen entstehen könnten, wird ausgeschlossen.</p>
-            
+
             <h4>4.2 Transportschäden und Verluste</h4>
             <p>InjectorFix übernimmt keine Haftung für Schäden oder Verluste, die während des Transports der Einspritzdüsen entstehen. Dies gilt sowohl für den Versand vom Kunden zu InjectorFix als auch für den Rückversand der gereinigten Einspritzdüsen an den Kunden. Es wird empfohlen, den Versand versichert und nachverfolgbar durchzuführen.</p>
-            
+
             <h4>4.3 Haftungsausschluss für Folgeschäden</h4>
             <p>InjectorFix haftet nicht für Schäden, die nach dem Einbau der gereinigten Einspritzdüsen am Motor oder anderen Fahrzeugteilen entstehen. Dies schließt auch Schäden ein, die durch unsachgemäßen Einbau, Fehlfunktionen oder veränderte Leistungswerte (z.B. erhöhter Kraftstoffverbrauch) verursacht werden könnten.</p>
 
@@ -66,14 +67,18 @@
 
             <h3>7. Datenschutz</h3>
             <p>Ihre personenbezogenen Daten werden von uns für die Dauer der Geschäftsbeziehung gespeichert und spätestens nach einem Jahr gelöscht, sofern keine gesetzlichen Aufbewahrungspflichten entgegenstehen. Wir verarbeiten und nutzen Ihre Daten ausschließlich für die Erfüllung unserer vertraglichen Pflichten und zur Erbringung der gewünschten Dienstleistungen. Weitere Informationen zum Datenschutz finden Sie in unserer <a href="datenschutz.html">Datenschutzerklärung</a>.</p>
-            
+
             <h3>8. Kleinunternehmerregelung</h3>
             <p>Gemäß § 19 UStG wird keine Umsatzsteuer berechnet.</p>
 
             <h3>9. Schlussbestimmungen</h3>
             <p>Sollten einzelne Bestimmungen dieser AGB unwirksam sein oder werden, so wird dadurch die Wirksamkeit der übrigen Bestimmungen nicht berührt. Es gilt das Recht der Bundesrepublik Deutschland.</p>
-
         </section>
+
+        <!-- Link zurück zur Startseite -->
+        <div style="text-align:center; margin-top: 40px;">
+            <a href="index.html" style="font-size: 1.5em; padding: 10px 20px; background-color: #007bff; color: white; text-decoration: none; border-radius: 5px;">Zurück zur Startseite</a>
+        </div>
     </main>
 
     <footer>
@@ -81,18 +86,23 @@
     </footer>
 
     <script>
+        function toggleMenu() {
+            const menu = document.getElementById('sideMenu');
+            const hamburger = document.querySelector('.hamburger-menu');
+            if (menu.style.display === 'block') {
+                menu.style.display = 'none';
+                hamburger.classList.remove('open');
+            } else {
+                menu.style.display = 'block';
+                hamburger.classList.add('open');
+            }
+        }
+
         document.addEventListener('DOMContentLoaded', function () {
-            const menuIcon = document.querySelector('.hamburger-menu');
-            const nav = document.querySelector('nav');
-
-            menuIcon.addEventListener('click', function() {
-                nav.style.display = nav.style.display === 'block' ? 'none' : 'block';
-            });
-
-            // Menü schließen, wenn ein Link angeklickt wird
             document.querySelectorAll('nav a').forEach(item => {
                 item.addEventListener('click', () => {
-                    nav.style.display = 'none';
+                    document.getElementById('sideMenu').style.display = 'none';
+                    document.querySelector('.hamburger-menu').classList.remove('open');
                 });
             });
         });
