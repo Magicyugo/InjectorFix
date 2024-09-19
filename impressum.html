@@ -13,12 +13,12 @@
         </div>
     </header>
 
-    <div class="hamburger-menu">
+    <div class="hamburger-menu" onclick="toggleMenu()">
         <span></span>
         <span></span>
         <span></span>
     </div>
-    <nav>
+    <nav id="sideMenu">
         <ul>
             <li><a href="index.html#about">Über uns</a></li>
             <li><a href="index.html#services">Dienstleistungen</a></li>
@@ -28,6 +28,7 @@
             <li><a href="index.html#contact">Kontakt</a></li>
             <li><a href="impressum.html">Impressum</a></li>
             <li><a href="agb.html">AGB</a></li>
+            <li><a href="datenschutz.html">Datenschutzerklärung</a></li>
         </ul>
     </nav>
 
@@ -39,18 +40,18 @@
             Josef-Lumper-Str. 4<br>
             89257 Illertissen<br>
             Deutschland</p>
-            
+
             <p>Kontakt:<br>
             Telefon: 01577 6468752<br>
             E-Mail: info@malinic.net</p>
-            
+
             <p>Umsatzsteuer-Identifikationsnummer gemäß §27a Umsatzsteuergesetz: Entfällt, da Kleinunternehmer gemäß §19 UStG.</p>
-            
+
             <p>Verantwortlich für den Inhalt nach § 55 Abs. 2 RStV:<br>
             Boban Malinic<br>
             Josef-Lumper-Str. 4<br>
             89257 Illertissen</p>
-            
+
             <h3>Haftungsausschluss</h3>
             <h4>Haftung für Inhalte</h4>
             <p>Als Diensteanbieter sind wir gemäß § 7 Abs.1 TMG für eigene Inhalte auf diesen Seiten nach den allgemeinen Gesetzen verantwortlich. Nach §§ 8 bis 10 TMG sind wir als Diensteanbieter jedoch nicht verpflichtet, übermittelte oder gespeicherte fremde Informationen zu überwachen oder nach Umständen zu forschen, die auf eine rechtswidrige Tätigkeit hinweisen. Verpflichtungen zur Entfernung oder Sperrung der Nutzung von Informationen nach den allgemeinen Gesetzen bleiben hiervon unberührt. Eine diesbezügliche Haftung ist jedoch erst ab dem Zeitpunkt der Kenntnis einer konkreten Rechtsverletzung möglich. Bei Bekanntwerden von entsprechenden Rechtsverletzungen werden wir diese Inhalte umgehend entfernen.</p>
@@ -71,6 +72,11 @@
 
             <p>Ihre personenbezogenen Daten werden von uns nur so lange gespeichert, wie es für die Durchführung der Dienstleistung notwendig ist. Nach Abschluss der Dienstleistung und sofern keine gesetzlichen Aufbewahrungspflichten bestehen, werden die Daten spätestens nach einem Jahr gelöscht. Wir verarbeiten und nutzen Ihre Daten ausschließlich für die Erfüllung unserer vertraglichen Pflichten und zur Erbringung der gewünschten Dienstleistungen.</p>
         </section>
+        
+        <!-- Link zurück zur Startseite -->
+        <div style="text-align:center; margin-top: 40px;">
+            <a href="index.html" style="font-size: 1.5em; padding: 10px 20px; background-color: #007bff; color: white; text-decoration: none; border-radius: 5px;">Zurück zur Startseite</a>
+        </div>
     </main>
 
     <footer>
@@ -78,18 +84,23 @@
     </footer>
 
     <script>
+        function toggleMenu() {
+            const menu = document.getElementById('sideMenu');
+            const hamburger = document.querySelector('.hamburger-menu');
+            if (menu.style.display === 'block') {
+                menu.style.display = 'none';
+                hamburger.classList.remove('open');
+            } else {
+                menu.style.display = 'block';
+                hamburger.classList.add('open');
+            }
+        }
+
         document.addEventListener('DOMContentLoaded', function () {
-            const menuIcon = document.querySelector('.hamburger-menu');
-            const nav = document.querySelector('nav');
-
-            menuIcon.addEventListener('click', function() {
-                nav.style.display = nav.style.display === 'block' ? 'none' : 'block';
-            });
-
-            // Menü schließen, wenn ein Link angeklickt wird
             document.querySelectorAll('nav a').forEach(item => {
                 item.addEventListener('click', () => {
-                    nav.style.display = 'none';
+                    document.getElementById('sideMenu').style.display = 'none';
+                    document.querySelector('.hamburger-menu').classList.remove('open');
                 });
             });
         });
