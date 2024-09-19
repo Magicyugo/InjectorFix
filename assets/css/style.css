@@ -169,20 +169,16 @@ form button:hover {
         padding: 10px 0;
     }
 
-    /* Verstecken der Abschnitte Impressum, AGB und Datenschutzerklärung auf kleinen Bildschirmen */
+    /* Abschnitte sind sichtbar auf kleinen Bildschirmen */
     #impressum, #agb, #datenschutz {
-        display: none;
+        display: block;
     }
 }
 
 /* Anpassungen für große Bildschirme (Desktops) */
 @media (min-width: 769px) {
-    header {
-        background-color: #007bff; /* Blauer Hintergrund */
-    }
-
     .logo {
-        max-width: 45%; /* 35% kleineres Logo für Desktop */
+        max-width: 70%;
     }
 
     .hamburger-menu {
@@ -201,8 +197,8 @@ form button:hover {
         margin: 20px auto;
     }
 
-    /* Verstecken der Abschnitte Impressum, AGB und Datenschutzerklärung auf großen Bildschirmen */
+    /* Abschnitte sind sichtbar auf großen Bildschirmen */
     #impressum, #agb, #datenschutz {
-        display: none;
+        display: block;
     }
 }
