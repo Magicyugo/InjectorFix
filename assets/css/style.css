@@ -13,7 +13,7 @@ header {
     text-align: center;
     border-bottom: 1px solid #ccc;
     position: relative;
-    z-index: 1; /* Sicherstellen, dass der Header immer im Vordergrund bleibt */
+    z-index: 1;
 }
 
 .header-content {
@@ -36,23 +36,11 @@ header {
     height: 35px;
     cursor: pointer;
     position: relative;
-    margin: 20px auto;
+    margin: 10px auto; /* Reduziert den Abstand vom Hamburger-Symbol */
     z-index: 999;
     background-color: #ccc;
     border-radius: 5px;
     transition: transform 0.3s ease;
-}
-
-.hamburger-menu.open span:nth-child(1) {
-    transform: rotate(45deg) translate(5px, 5px);
-}
-
-.hamburger-menu.open span:nth-child(2) {
-    opacity: 0;
-}
-
-.hamburger-menu.open span:nth-child(3) {
-    transform: rotate(-45deg) translate(5px, -5px);
 }
 
 .hamburger-menu span {
@@ -75,30 +63,13 @@ nav {
     z-index: 1000;
 }
 
-nav ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-}
-
-nav ul li {
-    text-align: center;
-    padding: 10px;
-}
-
-nav ul li a {
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-nav ul li a:hover,
-nav ul li a:active {
-    background-color: #555;
-}
-
 main {
-    padding: 120px 20px 20px; /* Abstand oben für den Header, damit Inhalt nicht überlappt */
+    padding: 80px 20px 20px; /* Reduziertes Padding, damit der Inhalt näher am Header ist */
+}
+
+h2 {
+    margin-top: 0; /* Entfernt zusätzlichen Abstand zwischen Header und Text */
+    padding-top: 0; /* Kein zusätzliches Padding */
 }
 
 section {
@@ -108,12 +79,6 @@ section {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-img {
-    width: 100%;
-    height: auto;
-    margin-bottom: 20px;
-}
-
 footer {
     background-color: #333;
     color: white;
@@ -121,62 +86,18 @@ footer {
     padding: 10px 0;
 }
 
-/* Formular-Stile */
-form {
-    background-color: #fff;
-    padding: 20px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
-
-form label {
-    display: block;
-    margin-bottom: 5px;
-}
-
-form input[type="text"],
-form input[type="email"],
-form textarea {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    margin-bottom: 10px;
-}
-
-form textarea {
-    min-height: 150px;
-}
-
-form button {
-    background-color: #5c67f2;
-    color: white;
-    border: none;
-    padding: 10px 15px;
-    cursor: pointer;
-}
-
-form button:hover {
-    background-color: #4a54e1;
-}
-
 /* Anpassungen für kleine Bildschirme */
 @media (max-width: 768px) {
     .hamburger-menu {
-        margin-top: 20px;
-        left: 10px;
+        margin-top: 10px; /* Reduziert den Abstand des Hamburger-Symbols auf dem Handy */
     }
 
-    header {
-        padding: 10px 0;
+    main {
+        padding-top: 100px; /* Kleineres Padding für Mobilgeräte */
     }
 
     .logo {
-        max-width: 80%; /* Auf dem Handy wird das Logo nur um 20% verkleinert */
-    }
-
-    /* Blauer Hintergrund und Abstand für den Header auf dem Handy */
-    main {
-        padding-top: 150px; /* Größeres Padding für kleine Bildschirme */
+        max-width: 80%; /* Verkleinert das Logo für Mobilgeräte */
     }
 }
 
@@ -187,8 +108,7 @@ form button:hover {
     }
 
     .hamburger-menu {
-        margin-top: 20px;
-        left: 10px;
+        margin-top: 10px;
     }
 
     img {
@@ -201,9 +121,4 @@ form button:hover {
         max-width: 800px;
         margin: 20px auto;
     }
-}
-
-/* Sicherstellen, dass das Hamburger-Menü auf Höhe des Symbols aufgeklappt wird */
-nav {
-    top: auto; /* Standardhöhe */
 }
